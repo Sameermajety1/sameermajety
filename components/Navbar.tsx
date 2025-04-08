@@ -18,6 +18,13 @@ const navItemVariants = {
   })
 };
 
+// Add interface for visible sections
+interface VisibleSection {
+  id: string;
+  visibleHeight: number;
+  distanceFromCenter: number;
+}
+
 const logoVariants = {
   hidden: { opacity: 0, x: -20 },
   visible: { 
@@ -55,7 +62,7 @@ const Navbar = () => {
       let found = false;
       
       // Create an array to collect visible sections with their visibility area
-      const visibleSections = [];
+      const visibleSections: VisibleSection[] = [];
       
       sections.forEach(section => {
         const sectionElement = section as HTMLElement;

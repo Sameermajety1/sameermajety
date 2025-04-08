@@ -4,9 +4,16 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { FloatingElement, FloatingParticle } from './FloatingElements';
 import TWEEN from '@tweenjs/tween.js';
+
+// Add interface for Orb type
+interface Orb {
+  mesh: THREE.Mesh;
+  speed: number;
+  distance: number;
+  rotAxis: THREE.Vector3;
+}
 
 // Floating element variants
 const floatingVariants = {
@@ -231,7 +238,7 @@ const Hero = () => {
     };
     
     // Add more medical symbols
-    const symbols = [];
+    const symbols: THREE.Group[] = [];
     for (let i = 0; i < 5; i++) {
       const symbol = createMedicalSymbol();
       symbol.position.set(
@@ -289,7 +296,7 @@ const Hero = () => {
     scene.add(heartbeat);
     
     // Add glowing orbs
-    const orbs = [];
+    const orbs: Orb[] = [];
     for (let i = 0; i < 12; i++) {
       const orbGeometry = new THREE.SphereGeometry(0.1 + Math.random() * 0.2, 32, 32);
       const orbMaterial = new THREE.MeshBasicMaterial({
