@@ -32,24 +32,24 @@ const floatingVariants = {
 
 // Text animation variants
 const titleVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: "easeOut",
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
 };
 
 const childVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.5 }
+    transition: { duration: 0.3 }
   }
 };
 
@@ -548,100 +548,136 @@ const Hero = () => {
       {/* 3D animated background */}
       <canvas 
         ref={canvasRef} 
-        className="absolute inset-0 w-full h-full" 
+        className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500" 
+        style={{ opacity: rendererRef.current ? 1 : 0 }}
       />
       
       {/* Dark overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90" />
       
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-12 pt-32 z-10 text-center">
-        <motion.div
-          className="max-w-4xl mx-auto"
-          variants={titleVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1 
-            className="section-heading mb-6 md:mb-8"
-            variants={childVariants}
-          >
-            <span className="block">Beyond Medicine: A Journey of</span>
-            <span className="gradient-text text-accent">Passion, Precision, and Purpose</span>
-          </motion.h1>
-          
-          <motion.p 
-            className="text-xl md:text-2xl text-gray max-w-3xl mx-auto mb-12"
-            variants={childVariants}
-          >
-            MBBS student with a vision for transformative healthcare and research
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            variants={childVariants}
-          >
-            <motion.a 
-              href="#academics" 
-              className="button-primary w-full sm:w-auto"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore My Journey
-            </motion.a>
-            <motion.a 
-              href="#contact" 
-              className="button-secondary w-full sm:w-auto"
-              whileHover={{ 
-                scale: 1.05,
-                borderColor: "rgba(59, 130, 246, 0.8)"
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-            </motion.a>
-          </motion.div>
-        </motion.div>
-        
-        {/* Floating stats - enhanced from Foliox template */}
-        <div className="hidden md:flex justify-center mt-16 gap-12">
-          {[
-            { number: '5+', label: 'Years of Medical Education' },
-            { number: '12+', label: 'Research Papers' },
-            { number: '20+', label: 'Medical Certifications' }
-          ].map((stat, index) => (
-            <motion.div 
-              key={index}
-              className="text-center relative"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
-            >
-              <motion.div
-                className="absolute -inset-4 rounded-xl opacity-30 blur-xl bg-gradient-to-tr from-secondary to-primary"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.2, 0.3, 0.2]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+      <div className="container mx-auto px-6 md:px-12 pt-16 z-10">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+          {/* Image for mobile - shown only on small screens */}
+          <div className="block lg:hidden w-full max-w-[300px] mx-auto">
+            <div className="relative w-full" style={{ height: '450px' }}>
+              <Image
+                src="/images/hero.png"
+                alt="Personal Photo"
+                fill
+                className="object-contain"
+                priority
               />
-              <motion.div 
-                className="text-5xl font-bold text-secondary mb-2 relative"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity, repeatDelay: index }}
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <motion.div
+            className="flex-1 text-center lg:text-left pt-8 lg:pt-16"
+            variants={titleVariants}
+            initial="hidden"
+            animate="visible"
+            viewport={{ once: true }}
+          >
+            <motion.h1 
+              className="text-4xl md:text-5xl font-bold mb-4 md:mb-6"
+              variants={childVariants}
+            >
+              <span className="block">Beyond Medicine: A Journey of</span>
+              <span className="gradient-text text-accent">Passion, Precision, and Purpose</span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-lg md:text-xl text-gray max-w-3xl lg:max-w-2xl mx-auto lg:mx-0 mb-8"
+              variants={childVariants}
+            >
+              MBBS student with a vision for transformative healthcare and research
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start justify-center gap-4 mb-8"
+              variants={childVariants}
+            >
+              <motion.a 
+                href="#academics" 
+                className="button-primary w-full sm:w-auto"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                {stat.number}
-              </motion.div>
-              <p className="text-gray relative z-10">{stat.label}</p>
+                Explore My Journey
+              </motion.a>
+              <motion.a 
+                href="#contact" 
+                className="button-secondary w-full sm:w-auto"
+                whileHover={{ 
+                  scale: 1.05,
+                  borderColor: "rgba(59, 130, 246, 0.8)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get In Touch
+              </motion.a>
             </motion.div>
-          ))}
+
+            {/* Stats - shown on desktop */}
+            <div className="hidden lg:flex flex-wrap gap-8 mt-12">
+              {[
+                { number: '5+', label: 'Years of Medical Education' },
+                { number: '12+', label: 'Research Papers' },
+                { number: '20+', label: 'Medical Certifications' }
+              ].map((stat, index) => (
+                <motion.div 
+                  key={index}
+                  className="text-left relative"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
+                >
+                  <motion.div
+                    className="absolute -inset-3 rounded-xl opacity-30 blur-xl bg-gradient-to-tr from-secondary to-primary"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.2, 0.3, 0.2]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    }}
+                  />
+                  <motion.div 
+                    className="text-4xl font-bold text-secondary mb-1 relative"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: index }}
+                  >
+                    {stat.number}
+                  </motion.div>
+                  <p className="text-sm text-gray relative z-10">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Image for desktop - hidden on small screens */}
+          <motion.div 
+            className="hidden lg:block w-full max-w-[400px] -mt-8"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <div className="relative w-full" style={{ height: '600px' }}>
+              <Image
+                src="/images/hero.png"
+                alt="Personal Photo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
       

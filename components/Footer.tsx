@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary/95 border-t border-light/10 pt-20 pb-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,10 +67,10 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { title: "Home", link: "#home" },
-                { title: "Skills", link: "#skills" },
                 { title: "Academics", link: "#academics" },
-                { title: "Achievements", link: "#achievements" },
-                { title: "Publications", link: "#publications" },
+                { title: "Experience", link: "#experience" },
+                { title: "Research & Publications", link: "#research-publications" },
+                { title: "Personal Life", link: "#personal-life" },
                 { title: "Contact", link: "#contact" }
               ].map((item, index) => (
                 <motion.li key={index} whileHover={{ x: 5 }}>
@@ -115,32 +115,6 @@ const Footer = () => {
                   {tag}
                 </motion.span>
               ))}
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-            <p className="text-gray mb-4">
-              Subscribe to receive updates on my latest research and publications.
-            </p>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full p-3 bg-primary/30 border border-light/10 rounded-lg focus:outline-none focus:border-secondary transition-colors pr-12"
-              />
-              <motion.button
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 flex items-center justify-center bg-secondary rounded-full text-primary"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <i className="ri-send-plane-fill"></i>
-              </motion.button>
             </div>
           </motion.div>
         </div>

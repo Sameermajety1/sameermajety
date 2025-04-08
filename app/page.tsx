@@ -2,16 +2,37 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
-import Academics from '../components/Academics';
-import Experience from '../components/Experience';
-import Achievements from '../components/Achievements';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { FloatingElements } from '../components/FloatingElements';
-import Publications from '../components/Publications';
-import PersonalLife from '../components/PersonalLife';
+
+// Lazy load components that are not immediately visible
+const Academics = dynamic(() => import('@/components/Academics'), {
+  loading: () => <div className="min-h-screen"></div>,
+  ssr: false
+});
+
+const Experience = dynamic(() => import('@/components/Experience'), {
+  loading: () => <div className="min-h-screen"></div>,
+  ssr: false
+});
+
+const Publications = dynamic(() => import('@/components/Publications'), {
+  loading: () => <div className="min-h-screen"></div>,
+  ssr: false
+});
+
+const PersonalLife = dynamic(() => import('@/components/PersonalLife'), {
+  loading: () => <div className="min-h-screen"></div>,
+  ssr: false
+});
+
+const Contact = dynamic(() => import('@/components/Contact'), {
+  loading: () => <div className="min-h-screen"></div>,
+  ssr: false
+});
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -27,7 +48,7 @@ export default function Home() {
       setScrollProgress(window.scrollY / scrollHeight);
       
       // Get the current visible section with improved detection
-      const sections = ['home', 'academics', 'experience', 'achievements', 'publications', 'personal-life', 'contact'];
+      const sections = ['home', 'academics', 'experience', 'research', 'publications', 'personal-life', 'contact'];
       const visibleSections = [];
       
       // Collect information about visible sections
@@ -140,19 +161,7 @@ export default function Home() {
       </motion.section>
       
       <motion.section
-        id="achievements"
-        initial="initial"
-        whileInView="animate"
-        exit="exit"
-        variants={pageVariants}
-        viewport={{ once: true, amount: 0.2 }}
-        className="mt-[-2rem]"
-      >
-        <Achievements />
-      </motion.section>
-      
-      <motion.section
-        id="publications"
+        id="research-publications"
         initial="initial"
         whileInView="animate"
         exit="exit"
@@ -201,8 +210,7 @@ export default function Home() {
             { id: 'home', label: 'Home', icon: '🏠' },
             { id: 'academics', label: 'Academics', icon: '📚' },
             { id: 'experience', label: 'Experience', icon: '👨‍⚕️' },
-            { id: 'achievements', label: 'Achievements', icon: '🏆' },
-            { id: 'publications', label: 'Publications', icon: '📝' },
+            { id: 'research-publications', label: 'Research & Publications', icon: '🔬' },
             { id: 'personal-life', label: 'Personal Life', icon: '🌟' },
             { id: 'contact', label: 'Contact', icon: '📞' }
           ].map(item => (

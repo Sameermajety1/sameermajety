@@ -6,14 +6,14 @@ import Link from 'next/link';
 
 // Animation variants
 const navItemVariants = {
-  hidden: { opacity: 0, y: -10 },
+  hidden: { opacity: 0, y: -5 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.3 + i * 0.1,
-      duration: 0.5,
-      ease: [0.6, -0.05, 0.01, 0.99]
+      delay: 0.1 + i * 0.05,
+      duration: 0.3,
+      ease: "easeOut"
     }
   })
 };
@@ -26,22 +26,30 @@ interface VisibleSection {
 }
 
 const logoVariants = {
-  hidden: { opacity: 0, x: -20 },
+  hidden: { opacity: 0, x: -10 },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: {
-      delay: 0.2,
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.01, 0.99]
+      delay: 0.1,
+      duration: 0.3,
+      ease: "easeOut"
     }
   }
 };
 
 const activeSectionVariants = {
   initial: { width: '0%', opacity: 0 },
-  animate: { width: '100%', opacity: 1, transition: { duration: 0.3 } },
-  exit: { width: '0%', opacity: 0, transition: { duration: 0.3 } }
+  animate: { 
+    width: '100%', 
+    opacity: 1, 
+    transition: { duration: 0.2 }
+  },
+  exit: { 
+    width: '0%', 
+    opacity: 0, 
+    transition: { duration: 0.2 }
+  }
 };
 
 const Navbar = () => {
@@ -124,8 +132,7 @@ const Navbar = () => {
     { id: 'home', label: 'Home' },
     { id: 'academics', label: 'Academics' },
     { id: 'experience', label: 'Experience' },
-    { id: 'achievements', label: 'Achievements' },
-    { id: 'publications', label: 'Publications' },
+    { id: 'research-publications', label: 'Research & Publications' },
     { id: 'personal-life', label: 'Personal Life' },
     { id: 'contact', label: 'Contact' }
   ];
@@ -199,13 +206,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             className="md:hidden bg-primary/95 backdrop-blur-md shadow-xl border-t border-gray/10"
           >
             <div className="container mx-auto py-4 px-6">
