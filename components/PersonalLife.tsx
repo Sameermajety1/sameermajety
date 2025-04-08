@@ -138,7 +138,7 @@ const PersonalLife = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -158,7 +158,7 @@ const PersonalLife = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Beyond <span className="gradient-text">Medicine</span>
+              My <span className="gradient-text">Personal Life</span>
             </motion.h2>
           </motion.div>
           <motion.p 

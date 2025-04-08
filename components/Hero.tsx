@@ -560,12 +560,12 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
           {/* Image for mobile - shown only on small screens */}
           <div className="block lg:hidden w-full max-w-[300px] mx-auto">
-            <div className="relative w-full" style={{ height: '450px' }}>
+            <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-secondary">
               <Image
-                src="/images/hero.png"
+                src="/images/hero-m.png"
                 alt="Personal Photo"
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>
@@ -663,7 +663,7 @@ const Hero = () => {
 
           {/* Image for desktop - hidden on small screens */}
           <motion.div 
-            className="hidden lg:block w-full max-w-[400px] -mt-8"
+            className="hidden lg:block w-full max-w-[400px]"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}

@@ -1303,6 +1303,9 @@ video {
 .-mt-8 {
   margin-top: -2rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -1363,6 +1366,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-\[300px\] {
+  height: 300px;
+}
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -1408,6 +1414,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-\[300px\] {
+  width: 300px;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -1609,6 +1618,10 @@ video {
 }
 .border-secondary\/30 {
   border-color: rgb(229 184 11 / 0.3);
+}
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 184 11 / var(--tw-border-opacity, 1));
 }
 .bg-accent {
   --tw-bg-opacity: 1;
