@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-primary/95 border-t border-light/10 pt-20 pb-10">
+    <footer className="hidden md:block bg-primary/95 border-t border-light/10 pt-20 pb-10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           <motion.div
