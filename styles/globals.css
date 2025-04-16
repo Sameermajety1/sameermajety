@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --color-primary: 15 23 42; /* #0F172A - Midnight Navy */
-    --color-secondary: 229 184 11; /* #E5B80B - Gold */
+    --color-secondary: 79 173 243; /* #4FADF3 - Light Medical Blue */
     --color-accent: 4 71 171; /* #0047AB - Blue */
     --color-glow: 220 20 60; /* #DC143C - Red */
     --color-light: 248 250 252; /* #F8FAFC - Soft White */
@@ -41,7 +41,7 @@
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #E5B80B 0%, #4361ee 50%, #DC143C 100%);
+    background: linear-gradient(135deg, #4FADF3 0%, #4361ee 50%, #DC143C 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,7 +49,7 @@
   }
   
   .gradient-text-gold {
-    background: linear-gradient(135deg, #E5B80B 0%, #f7dc6f 100%);
+    background: linear-gradient(135deg, #4FADF3 0%, #7fd3ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

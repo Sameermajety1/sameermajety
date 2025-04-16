@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -66,21 +67,21 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { title: "Home", link: "#home" },
-                { title: "Academics", link: "#academics" },
-                { title: "Experience", link: "#experience" },
-                { title: "Research & Publications", link: "#research-publications" },
-                { title: "Personal Life", link: "#personal-life" },
-                { title: "Contact", link: "#contact" }
+                { title: "Home", link: "/" },
+                { title: "Academics", link: "/academics" },
+                { title: "Experience", link: "/experience" },
+                { title: "Research & Publications", link: "/research-publications" },
+                { title: "Personal Life", link: "/personal-life" },
+                { title: "Contact", link: "/contact" }
               ].map((item, index) => (
                 <motion.li key={index} whileHover={{ x: 5 }}>
-                  <a 
+                  <Link 
                     href={item.link} 
                     className="text-gray hover:text-secondary transition-colors flex items-center"
                   >
                     <i className="ri-arrow-right-s-line mr-2"></i>
                     {item.title}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -137,14 +138,14 @@ const Footer = () => {
       
       {/* Scroll to top button */}
       <motion.a 
-        href="#home"
+        href="/"
         className="fixed bottom-6 right-6 w-12 h-12 bg-secondary rounded-full flex items-center justify-center shadow-glow z-50 text-primary"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
         whileHover={{ 
           y: -5,
-          boxShadow: "0 0 20px 5px rgba(125, 255, 179, 0.5)" 
+          boxShadow: "0 0 20px 5px rgba(79, 173, 243, 0.5)" 
         }}
         whileTap={{ scale: 0.9 }}
       >

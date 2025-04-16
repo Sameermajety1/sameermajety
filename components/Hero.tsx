@@ -336,14 +336,14 @@ const Hero = () => {
       // Earpieces
       const earpiece1 = new THREE.Mesh(
         new THREE.SphereGeometry(0.2, 16, 16),
-        new THREE.MeshBasicMaterial({ color: 0xE5B80B }) // Gold color
+        new THREE.MeshBasicMaterial({ color: 0x4FADF3 }) // Light Medical Blue
       );
       earpiece1.position.set(-0.5, 0, 0);
       stethoscopeGroup.add(earpiece1);
       
       const earpiece2 = new THREE.Mesh(
         new THREE.SphereGeometry(0.2, 16, 16),
-        new THREE.MeshBasicMaterial({ color: 0xE5B80B }) // Gold color
+        new THREE.MeshBasicMaterial({ color: 0x4FADF3 }) // Light Medical Blue
       );
       earpiece2.position.set(0.5, 0, 0);
       stethoscopeGroup.add(earpiece2);
@@ -371,7 +371,7 @@ const Hero = () => {
       // Chestpiece
       const chestpiece = new THREE.Mesh(
         new THREE.CylinderGeometry(0.3, 0.3, 0.1, 32),
-        new THREE.MeshBasicMaterial({ color: 0xE5B80B }) // Gold color
+        new THREE.MeshBasicMaterial({ color: 0x4FADF3 }) // Light Medical Blue
       );
       chestpiece.rotation.x = Math.PI / 2;
       chestpiece.position.set(0, -2.5, 0);

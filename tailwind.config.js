@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FFFFFF",     // White background
-        secondary: "#E5B80B",   // Gold
+        secondary: "#4FADF3",   // Light Medical Blue (replacing Gold #E5B80B)
         accent: "#0047AB",      // Blue
         glow: "#DC143C",        // Red (Crimson)
         light: "#0F172A",       // Dark text (reverse of previous)

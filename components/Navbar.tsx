@@ -64,56 +64,6 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
-
-      // Update active link based on scroll position
-      const sections = document.querySelectorAll('section[id]');
-      let found = false;
-      
-      // Create an array to collect visible sections with their visibility area
-      const visibleSections: VisibleSection[] = [];
-      
-      sections.forEach(section => {
-        const sectionElement = section as HTMLElement;
-        const sectionTop = sectionElement.offsetTop;
-        const sectionHeight = sectionElement.offsetHeight;
-        const sectionId = section.getAttribute('id') || 'home';
-        
-        // Calculate how much of the section is visible
-        const viewportHeight = window.innerHeight;
-        const rect = sectionElement.getBoundingClientRect();
-        const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-        
-        // Only consider sections that are actually visible in the viewport
-        if (visibleHeight > 100) {
-          visibleSections.push({
-            id: sectionId,
-            visibleHeight: visibleHeight,
-            distanceFromCenter: Math.abs((viewportHeight / 2) - ((rect.top + rect.bottom) / 2))
-          });
-        }
-      });
-      
-      // If we have visible sections, select the one with the most visibility
-      // or closest to the center if multiple sections have similar visibility
-      if (visibleSections.length > 0) {
-        // Sort first by visible height (descending), then by distance from center (ascending)
-        visibleSections.sort((a, b) => {
-          // If the difference in visible height is significant
-          if (Math.abs(a.visibleHeight - b.visibleHeight) > 100) {
-            return b.visibleHeight - a.visibleHeight;
-          }
-          // Otherwise use distance from center
-          return a.distanceFromCenter - b.distanceFromCenter;
-        });
-        
-        setActiveLink(visibleSections[0].id);
-        found = true;
-      }
-      
-      // If no section is found visible enough, default to home
-      if (!found) {
-        setActiveLink('home');
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -129,12 +79,12 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'academics', label: 'Academics' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'research-publications', label: 'Research & Publications' },
-    { id: 'personal-life', label: 'Personal Life' },
-    { id: 'contact', label: 'Contact' }
+    { id: '/', label: 'Home' },
+    { id: '/academics', label: 'Academics' },
+    { id: '/experience', label: 'Experience' },
+    { id: '/research-publications', label: 'Research & Publications' },
+    { id: '/personal-life', label: 'Personal Life' },
+    { id: '/contact', label: 'Contact' }
   ];
 
   return (
@@ -162,7 +112,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <Link
               key={item.id}
-              href={`#${item.id}`}
+              href={item.id}
               className={`nav-link text-light hover:text-secondary transition-colors ${activeLink === item.id ? 'text-secondary' : ''}`}
               onClick={() => setActiveLink(item.id)}
             >
@@ -203,40 +153,63 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence mode="wait">
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-primary/95 backdrop-blur-md shadow-xl border-t border-gray/10"
-          >
-            <div className="container mx-auto py-4 px-6">
-              <nav className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <Link
+        {/* Mobile Navigation Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="fixed inset-0 bg-primary/95 z-50 md:hidden flex flex-col items-center justify-center"
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: "-100%" }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                onClick={closeMenu}
+                className="absolute top-6 right-6 text-light focus:outline-none"
+                aria-label="Close Menu"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              <nav className="flex flex-col items-center space-y-6">
+                {navItems.map((item, i) => (
+                  <motion.div
                     key={item.id}
-                    href={`#${item.id}`}
-                    className={`text-light hover:text-secondary transition-colors py-2 ${
-                      activeLink === item.id ? 'text-secondary' : ''
-                    }`}
-                    onClick={() => {
-                      closeMenu();
-                      setActiveLink(item.id);
-                    }}
+                    custom={i}
+                    variants={navItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit={{ opacity: 0, y: 5, transition: { duration: 0.2 } }}
                   >
-                    {item.label}
-                  </Link>
+                    <Link
+                      href={item.id}
+                      className={`text-2xl font-semibold ${
+                        activeLink === item.id ? 'text-secondary' : 'text-light'
+                      } hover:text-secondary transition-colors`}
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 ))}
               </nav>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </header>
   );
 };

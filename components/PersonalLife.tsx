@@ -25,7 +25,7 @@ const PersonalLife = () => {
     {
       title: "Roller Skating",
       level: "Indian National Level",
-      icon: <FaSkating className="text-yellow-400" />
+      icon: <FaSkating className="text-secondary" />
     },
     {
       title: "Swimming",
@@ -126,7 +126,7 @@ const PersonalLife = () => {
       <FloatingElement
         size={300}
         position={{ top: '5%', right: '5%' }}
-        color="rgba(229, 184, 11, 0.03)"
+        color="rgba(79, 173, 243, 0.03)"
         duration={8}
       />
       <FloatingElement
@@ -180,7 +180,7 @@ const PersonalLife = () => {
             viewport={{ once: true }}
           >
           <h3 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
-            <FaMedal className="text-yellow-400" /> Athletic Achievements
+            <FaMedal className="text-secondary" /> Athletic Achievements
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sports.map((sport, index) => (
@@ -268,7 +268,7 @@ const PersonalLife = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-12 text-center">
-            Personal <span className="text-yellow-400">Gallery</span>
+            Personal <span className="text-secondary">Gallery</span>
           </h3>
           <ImageGallery images={galleryImages} />
         </motion.div>
