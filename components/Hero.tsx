@@ -682,59 +682,6 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Mobile Navigation Buttons - shown only on small screens */}
-      <div className="lg:hidden w-full absolute bottom-16 left-0 px-6 z-10">
-        <div className="flex flex-col items-center">
-          <motion.h3 
-            className="text-lg text-light mb-5 text-center font-medium"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.5 }}
-          >
-            Explore More
-          </motion.h3>
-          <div className="grid grid-cols-2 gap-4 w-full max-w-md mx-auto">
-            {[
-              { path: "/academics", icon: "📚", label: "Academics" },
-              { path: "/experience", icon: "👨‍⚕️", label: "Experience" },
-              { path: "/research-publications", icon: "🔬", label: "Research" },
-              { path: "/personal-life", icon: "🌟", label: "Personal" }
-            ].map((item, index) => (
-              <motion.div
-                key={item.path}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.9 + index * 0.1, duration: 0.5 }}
-              >
-                <Link 
-                  href={item.path} 
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl py-3 text-center flex items-center justify-center gap-2 shadow-lg hover:bg-white/10 transition-all duration-300 hover:border-secondary/30"
-                >
-                  <span className="text-lg">{item.icon}</span> 
-                  <span className="font-medium">{item.label}</span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-          
-          {/* Contact Button */}
-          <motion.div
-            className="mt-4 w-full max-w-md mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.3, duration: 0.5 }}
-          >
-            <Link 
-              href="/contact" 
-              className="bg-secondary/90 text-primary backdrop-blur-sm border border-secondary/30 rounded-xl py-3 text-center flex items-center justify-center gap-2 shadow-lg hover:bg-secondary transition-all duration-300 w-full"
-            >
-              <span className="text-lg">📞</span> 
-              <span className="font-medium">Contact Me</span>
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-      
       {/* Strategic floating elements for hero section */}
       <FloatingElement
         size={300}
