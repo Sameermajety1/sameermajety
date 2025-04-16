@@ -136,10 +136,10 @@ const Footer = () => {
         </motion.div>
       </div>
       
-      {/* Scroll to top button */}
+      {/* Scroll to top button - hidden on mobile */}
       <motion.a 
         href="/"
-        className="fixed bottom-6 right-6 w-12 h-12 bg-secondary rounded-full flex items-center justify-center shadow-glow z-50 text-primary"
+        className="hidden md:flex fixed bottom-6 right-6 w-12 h-12 bg-secondary rounded-full items-center justify-center shadow-glow z-50 text-primary"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
