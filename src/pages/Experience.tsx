@@ -1,7 +1,58 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FloatingParticle } from '../components/FloatingElements';
+
+// Shared data used to render mobile cards in sync with desktop content
+const experienceItems = [
+  {
+    date: 'August 2025 - September 2025',
+    title: 'Research Assistant - Internal Medicine',
+    location: 'Nnn, Baton Rouge, LA, United States of America',
+    focus: 'Primary Focus: Clinical / Translational science',
+  },
+  {
+    date: 'July 2025 - August 2025',
+    title: 'Internal Medicine Observership (Outpatient)',
+    location: 'Corewell Health, Dearborn, MI, United States of America',
+    focus: 'Primary Focus: Clinical / Translational science',
+  },
+  {
+    date: 'May 2025 - June 2025',
+    title: 'Internal Medicine Observership (Outpatient)',
+    location: 'Curewell Medical Center, Chicago, IL, United States of America',
+    focus: 'Primary Focus: Clinical / Translational science',
+  },
+  {
+    date: 'September 2024 - Present',
+    title: 'Tutor and Mentor',
+    location: 'IMRC, Hyderabad, India',
+    focus: 'Primary Focus: Medical Education',
+  },
+  {
+    date: 'March 2024 - Present',
+    title: 'Founder and Mentor - Competitive Exam Mentorship Program',
+    location: 'School of Medicine, Xiamen University, Xiamen, China',
+    focus: 'Primary Focus: Medical Education',
+  },
+  {
+    date: 'June 2023 - Present',
+    title: 'Medical Volunteer Doctor',
+    location: 'Indian Red Cross Society, Kakinada, 533001, India',
+    focus: 'Primary Focus: Community involvement / Outreach',
+  },
+  {
+    date: 'September 2022 - September 2023',
+    title: 'Clinical Intern',
+    location: 'Rangaraya Medical College, Kakinada, 533001, India',
+    focus: 'Primary Focus: Clinical / Translational science',
+  },
+  {
+    date: 'September 2019 - May 2022',
+    title: 'Student Body Leadership - President',
+    location: 'School of Medicine, Xiamen University, Xiamen, China',
+    focus: 'Primary Focus: Medical Education',
+  },
+];
 
 const Experience = () => {
   return (
@@ -535,143 +586,42 @@ const Experience = () => {
               <div className="absolute inset-0 rounded-full animate-pulse opacity-50"></div>
             </div>
 
-            {/* House Surgeon - Mobile */}
-            <div className="relative mb-6 pl-12 mt-0">
-              {/* Timeline dot on the left */}
-              <div className="absolute left-0 top-4 z-20">
-                <motion.div
-                  className="w-8 h-8 bg-accent rounded-full"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
-                  }}
-                >
-                  <motion.div 
-                    className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
-                        '0 0 0 12px rgba(4, 71, 171, 0)'
-                      ]
-                    }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                </motion.div>
-              </div>
-              
-              {/* House Surgeon details */}
-              <motion.div
-                className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">September 2022-March 2024</span>
-                <h3 className="text-2xl font-bold mb-2">House Surgeon</h3>
-                <p className="text-lg mb-1 italic">Rangaraya Medical College, Kakinada, India</p>
-                <p className="text-gray-300 mt-3">
-                  Rotating in departments of Internal Medicine, Surgery, G Obs, Paediatrics, Emergency Medicine, Anaesthesia, Pulmonology and Community Medicine.
-                </p>
-              </motion.div>
-            </div>
+            {/* Render all items from shared data */}
+            {experienceItems.map((item, idx) => (
+              <div key={idx} className={`relative mb-6 pl-12 ${idx === 0 ? 'mt-0' : ''}`}>
+                {/* Timeline dot on the left */}
+                <div className="absolute left-0 top-4 z-20">
+                  <motion.div
+                    className="w-8 h-8 bg-secondary rounded-full"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                    style={{ boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)' }}
+                  >
+                    <motion.div 
+                      className="absolute inset-0 rounded-full"
+                      animate={{ boxShadow: ['0 0 0 0px rgba(4, 71, 171, 0.8)', '0 0 0 12px rgba(4, 71, 171, 0)'] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    />
+                  </motion.div>
+                </div>
 
-            {/* Clinical Extern 1 - Mobile */}
-            <div className="relative mb-6 pl-12">
-              {/* Timeline dot on the left */}
-              <div className="absolute left-0 top-4 z-20">
+                {/* Card */}
                 <motion.div
-                  className="w-8 h-8 bg-secondary rounded-full"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
+                  className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)'
-                  }}
+                  transition={{ duration: 0.6 }}
                 >
-                  <motion.div 
-                    className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(229, 184, 11, 0.8)', 
-                        '0 0 0 12px rgba(229, 184, 11, 0)'
-                      ]
-                    }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
+                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">{item.date}</span>
+                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-lg mb-1 italic">{item.location}</p>
+                  <p className="text-gray-300 mt-3">{item.focus}</p>
                 </motion.div>
               </div>
-              
-              {/* Clinical Extern 1 details */}
-              <motion.div
-                className="mb-6 bg-gradient-to-r from-secondary/5 to-secondary/15 p-5 rounded-2xl shadow-lg"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-secondary text-sm mb-2 block bg-secondary/10 px-4 py-1 rounded-full w-fit">April 2022 - September 2022</span>
-                <h3 className="text-2xl font-bold mb-2">Clinical Extern</h3>
-                <p className="text-lg mb-1 italic">Pavani Multi Speciality Hospital Kakinada, India</p>
-              </motion.div>
-            </div>
-
-            {/* Clinical Extern 2 - Mobile */}
-            <div className="relative mb-6 pl-12">
-              {/* Timeline dot on the left */}
-              <div className="absolute left-0 top-4 z-20">
-                <motion.div
-                  className="w-8 h-8 bg-accent rounded-full"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
-                  }}
-                >
-                  <motion.div 
-                    className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
-                        '0 0 0 12px rgba(4, 71, 171, 0)'
-                      ]
-                    }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                </motion.div>
-              </div>
-              
-              {/* Clinical Extern 2 details */}
-              <motion.div
-                className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">April 2021- March 2022</span>
-                <h3 className="text-2xl font-bold mb-2">Clinical Extern</h3>
-                <p className="text-lg mb-1 italic">Sri Bala Prabha Hospital Kakinada, India</p>
-              </motion.div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

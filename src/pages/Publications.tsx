@@ -564,7 +564,7 @@ const Publications = () => {
               {/* Additional cards in smaller size */}
               {expandedSections.peerReviewed && (
                 <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     {publications.peerReviewed.slice(6, 10).map((pub, index) => (
                       <div key={`peer-extra-${index}`}>
                         <CompactPublicationCard pub={pub} />
@@ -641,7 +641,7 @@ const Publications = () => {
               {/* Additional cards in smaller size */}
               {expandedSections.conferences && (
                 <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     {publications.conferences.slice(6, 12).map((pub, index) => (
                       <div key={`conf-extra-${index}`}>
                         <CompactPublicationCard pub={pub} />
@@ -717,7 +717,7 @@ const Publications = () => {
               {/* Additional cards in smaller size */}
               {expandedSections.posters && (
                 <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     {publications.posters.slice(4, 8).map((poster, index) => (
                       <div key={`poster-extra-${index}`}>
                         <CompactPosterCard poster={poster} />

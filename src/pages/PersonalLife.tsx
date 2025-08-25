@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FloatingParticle } from '../components/FloatingElements';
 import { FaMedal, FaSwimmer, FaFistRaised, FaDumbbell, FaSkating, FaCrown, FaUsers, FaHandshake, FaHeart } from 'react-icons/fa';
 import { MdSurfing, MdScubaDiving, MdKitesurfing, MdKayaking, MdHiking, MdVolunteerActivism } from 'react-icons/md';
-import { GiTrophy, GiLaurelCrown } from 'react-icons/gi';
-import ImageGallery from '../components/ImageGallery';
+
 
 interface Sport {
   title: string;
@@ -15,14 +13,6 @@ interface Sport {
   color: string;
 }
 
-interface Leadership {
-  title: string;
-  organization: string;
-  duration: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-}
 
 interface Adventure {
   name: string;
@@ -72,84 +62,8 @@ const PersonalLife = () => {
     { name: "Under Sea Walking", icon: <MdHiking />, description: "Ocean Floor Walking", completed: true }
   ];
 
-  const leadershipExperiences: Leadership[] = [
-    {
-      title: "President",
-      organization: "5th Student Union",
-      duration: "September 2019 to May 2022",
-      description: "Led student body initiatives, organized events, and represented student interests at Xiamen University School of Medicine.",
-      icon: <FaCrown />,
-      color: "from-amber-500/20 to-orange-500/20"
-    },
-    {
-      title: "Department Head",
-      organization: "Publicity Department",
-      duration: "May 2018 to August 2019",
-      description: "Managed publicity campaigns, social media presence, and communication strategies for student union activities.",
-      icon: <FaUsers />,
-      color: "from-blue-500/20 to-indigo-500/20"
-    },
-    {
-      title: "Founder & Head Mentor",
-      organization: "Competitive Exam Mentorship Program",
-      duration: "2021 to Present",
-      description: "Established and lead a comprehensive mentorship program helping students prepare for competitive medical examinations.",
-      icon: <GiLaurelCrown />,
-      color: "from-emerald-500/20 to-teal-500/20"
-    },
-    {
-      title: "Tutor & Mentor",
-      organization: "Interdisciplinary Medical Research Consortium (IMRC)",
-      duration: "2022 to Present",
-      description: "Provide academic guidance and research mentorship to medical students pursuing interdisciplinary research projects.",
-      icon: <FaHandshake />,
-      color: "from-violet-500/20 to-purple-500/20"
-    },
-    {
-      title: "Volunteer",
-      organization: "Mana Cheyutha Charitable Trust",
-      duration: "July 2022 to Present",
-      description: "Participate in free health camps serving slums in urban areas and difficult-to-reach tribal settlements.",
-      icon: <FaHeart />,
-      color: "from-rose-500/20 to-pink-500/20"
-    },
-    {
-      title: "Campaign Head",
-      organization: "Anti-Smoking Campaign",
-      duration: "September 2020",
-      description: "Led awareness campaigns and educational programs to promote smoking cessation and healthy lifestyle choices.",
-      icon: <MdVolunteerActivism />,
-      color: "from-cyan-500/20 to-blue-500/20"
-    }
-  ];
+  
 
-  const galleryImages = [
-    {
-      src: "/images/1.jpg",
-      alt: "Gallery Image 1",
-      category: "Sports"
-    },
-    {
-      src: "/images/2.jpg",
-      alt: "Gallery Image 2",
-      category: "Me"
-    },
-    {
-      src: "/images/3.jpg",
-      alt: "Gallery Image 3",
-      category: "Seminar"
-    },
-    {
-      src: "/images/4.jpg",
-      alt: "Gallery Image 4",
-      category: "Speech"
-    },
-    {
-      src: "/images/asram.jpg",
-      alt: "Gallery Image 5",
-      category: "University"
-    }
-  ];
 
   return (
     <div className="relative" id="personal-life">
@@ -397,15 +311,15 @@ const PersonalLife = () => {
                                 <div className="space-y-1">
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Squat: 180kg</span>
+                                    <span className="text-xs">Squat</span>
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Bench: 120kg</span>
+                                    <span className="text-xs">Bench</span>
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Deadlift: 210kg</span>
+                                    <span className="text-xs">Deadlift</span>
                                   </div>
                                 </div>
                               </div>

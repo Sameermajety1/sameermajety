@@ -2,6 +2,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FloatingParticle } from '../components/FloatingElements';
 
+// Shared data used by both desktop and mobile views
+const academicHighlights: string[] = [
+  'Awarded "Excellent Graduate Distinction"',
+  'President of Student Union',
+];
+
+const scholarshipPoints: string[] = ['1', '2', '3', '4', '5', '6'];
+
+const honorLines: string[] = [
+  'Ranked in the top 1% of my batch in the following subjects:',
+  'Physiology, Biochemistry, Pathology, Microbiology',
+  'Physical Diagnostics, Surgery-II, Orthopedics',
+  'Psychiatry and Neurology, Infectious Diseases',
+  'Dermatology, and Emergency Medicine',
+];
+
 const Academics = () => {
   return (
     <div className="relative" id="academics">
@@ -90,19 +106,15 @@ const Academics = () => {
                 >
                   <h3 className="text-xl font-bold mb-4 text-secondary">Highlights</h3>
                   <ul className="space-y-4">
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">Awarded "Excellent Graduate Distinction"</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">President of Student Union</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
+                    {academicHighlights.map((item, idx) => (
+                      <li key={idx} className="flex items-center justify-end">
+                        <span className="text-right text-gray-300">{item}</span>
+                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
-              
-
               {/* Timeline dot in the middle */}
               <div className="absolute md:left-1/2 left-0 top-4 transform md:-translate-x-1/2 z-20">
                 <motion.div
@@ -131,7 +143,6 @@ const Academics = () => {
                   />
                 </motion.div>
               </div>
-
               {/* Right column - Education details */}
               <div className="md:w-1/2 w-full md:pl-8 pl-12">
                 <motion.div
@@ -141,7 +152,6 @@ const Academics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  
                   <h3 className="text-3xl font-bold mb-2">Bachelor of Medicine and Bachelor of Surgery</h3>
                   <p className="text-xl mb-1">The School of Medicine, <br/> Xiamen University</p>
                   <p className="text-gray-400">China</p>
@@ -161,36 +171,16 @@ const Academics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* <h3 className="text-xl font-bold mb-4 text-accent">Scholarships</h3> */}
                   <ul className="space-y-4">
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">1</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">2</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">3</span>
+                    {scholarshipPoints.map((pt, idx) => (
+                      <li key={idx} className="flex items-center justify-end">
+                        <span className="text-right text-gray-300">{pt}</span>
                         <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
                       </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">4</span>
-                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                      </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">5</span>
-                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                      </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">6</span>
-                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
-
               {/* Timeline dot in the middle */}
               <div className="absolute md:left-1/2 left-0 top-4 transform md:-translate-x-1/2 z-20">
                 <motion.div
@@ -198,28 +188,16 @@ const Academics = () => {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
-                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  style={{ boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)' }}
                 >
                   <motion.div 
                     className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
-                        '0 0 0 12px rgba(4, 71, 171, 0)'
-                      ]
-                    }}
+                    animate={{ boxShadow: ['0 0 0 0px rgba(4, 71, 171, 0.8)', '0 0 0 12px rgba(4, 71, 171, 0)'] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   />
                 </motion.div>
               </div>
-
               {/* Right column - Scholarship highlights */}
               <div className="md:w-1/2 w-full md:pl-8 pl-12">
                 <motion.div
@@ -230,16 +208,13 @@ const Academics = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <h3 className="text-3xl font-bold mb-2">Scholarships</h3>
-                  {/* <p className="text-xl mb-1">Merit-Based Scholarships</p>
-                  <p className="text-gray-400">2021 - 2025</p>
-                  <p className="text-gray-400 mt-2">Full tuition coverage and monthly stipend</p> */}
                 </motion.div>
               </div>
             </div>
 
             {/* Timeline - 3 */}
             <div className="flex items-start relative mb-8">
-              {/* Left column - Scholarship details */}
+              {/* Left column - Received honors list */}
               <div className="w-1/2 pr-8 text-right">
                 <motion.div
                   className="mb-6 bg-gradient-to-l from-accent/5 to-accent/10 p-5 rounded-2xl shadow-lg"
@@ -248,33 +223,16 @@ const Academics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* <h3 className="text-xl font-bold mb-4 text-secondary">Received Honors</h3> */}
                   <ul className="space-y-4">
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">Ranked in the top 1% of my batch in the following subjects:</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
-                    <li className="flex items-center justify-end">
-                      <span className="text-right text-gray-300">Physiology, Biochemistry, Pathology, Microbiology</span>
-                      <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                    </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">Physical Diagnostics, Surgery-II, Orthopedics</span>
+                    {honorLines.map((line, idx) => (
+                      <li key={idx} className="flex items-center justify-end">
+                        <span className="text-right text-gray-300">{line}</span>
                         <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
                       </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">Psychiatry and Neurology, Infectious Diseases</span>
-                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                      </li>
-                      <li className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">Dermatology, and Emergency Medicine</span>
-                        <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
-                      </li>
-                      
+                    ))}
                   </ul>
                 </motion.div>
               </div>
-
               {/* Timeline dot in the middle */}
               <div className="absolute md:left-1/2 left-0 top-4 transform md:-translate-x-1/2 z-20">
                 <motion.div
@@ -282,29 +240,17 @@ const Academics = () => {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
-                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  style={{ boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)' }}
                 >
                   <motion.div 
                     className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
-                        '0 0 0 12px rgba(4, 71, 171, 0)'
-                      ]
-                    }}
+                    animate={{ boxShadow: ['0 0 0 0px rgba(4, 71, 171, 0.8)', '0 0 0 12px rgba(4, 71, 171, 0)'] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   />
                 </motion.div>
               </div>
-
-              {/* Right column - Scholarship highlights */}
+              {/* Right column */}
               <div className="md:w-1/2 w-full md:pl-8 pl-12">
                 <motion.div
                   className="mb-6 bg-secondary/5 p-5 rounded-2xl shadow-lg"
@@ -314,17 +260,12 @@ const Academics = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <h3 className="text-3xl font-bold mb-2">Received Honors</h3>
-                  {/* <p className="text-xl mb-1">Merit-Based Scholarships</p>
-                  <p className="text-gray-400">2021 - 2025</p>
-                  <p className="text-gray-400 mt-2">Full tuition coverage and monthly stipend</p> */}
                 </motion.div>
               </div>
             </div>
-            
           </div>
         </div>
         
-
         {/* Timeline line in the center - Mobile version */}
         <div className="md:hidden block relative max-w-4xl w-full h-full mx-auto">
           <div 
@@ -337,39 +278,25 @@ const Academics = () => {
             {/* Pulsing effect */}
             <div className="absolute inset-0 rounded-full animate-pulse opacity-50"></div>
           </div>
-          
-          {/* Academic section - Mobile timeline entries */}
+
+          {/* Education details - Mobile */}
           <div className="relative pl-12 mb-8 mt-16">
-            {/* Timeline dot on the left */}
             <div className="absolute left-0 top-4 z-20">
               <motion.div
                 className="w-8 h-8 bg-secondary rounded-full"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 300, 
-                  damping: 15 
-                }}
-                style={{
-                  boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)'
-                }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                style={{ boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)' }}
               >
                 <motion.div 
                   className="absolute inset-0 rounded-full"
-                  animate={{ 
-                    boxShadow: [
-                      '0 0 0 0px rgba(229, 184, 11, 0.8)', 
-                      '0 0 0 12px rgba(229, 184, 11, 0)'
-                    ]
-                  }}
+                  animate={{ boxShadow: ['0 0 0 0px rgba(229, 184, 11, 0.8)', '0 0 0 12px rgba(229, 184, 11, 0)'] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 />
               </motion.div>
             </div>
-            
-            {/* Education details - Mobile */}
             <motion.div
               className="mb-6 bg-gradient-to-r from-secondary/5 to-secondary/10 p-5 rounded-2xl shadow-lg"
               initial={{ opacity: 0, x: 30 }}
@@ -377,14 +304,32 @@ const Academics = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-secondary text-sm mb-2 block bg-secondary/10 px-4 py-1 rounded-full w-fit">Expected Graduation - 2025</span>
+              
               <h3 className="text-3xl font-bold mb-2">Bachelor of Medicine and Bachelor of Surgery</h3>
-              <p className="text-xl mb-1">Xiamen University</p>
+              <p className="text-xl mb-1">The School of Medicine, <br/> Xiamen University</p>
               <p className="text-gray-400">China</p>
-              <p className="text-gray-400 mt-2">Expected Graduation - June 2025</p>
+              <p className="text-gray-400 mt-2">Graduated in June 2025</p>
             </motion.div>
-            
-            {/* Highlights - Mobile */}
+          </div>
+          
+          {/* Highlights - Mobile */}
+          <div className="relative pl-12 mb-6">
+            <div className="absolute left-0 top-4 z-20">
+              <motion.div
+                className="w-8 h-8 bg-secondary rounded-full"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                style={{ boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)' }}
+              >
+                <motion.div 
+                  className="absolute inset-0 rounded-full"
+                  animate={{ boxShadow: ['0 0 0 0px rgba(229, 184, 11, 0.8)', '0 0 0 12px rgba(229, 184, 11, 0)'] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
+              </motion.div>
+            </div>
             <motion.div
               className="mb-6 bg-secondary/5 p-5 rounded-2xl shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -394,30 +339,34 @@ const Academics = () => {
             >
               <h3 className="text-xl font-bold mb-4 text-secondary">Highlights</h3>
               <ul className="space-y-4">
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Ranked in the top 1% of my batch in the following subjects:</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Physiology, Biochemistry, Pathology, Microbiology</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Physical Diagnostics, Surgery-II, Orthopedics</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Psychiatry and Neurology, Infectious Diseases</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Dermatology, and Emergency Medicine</span>
-                </li>
+                {academicHighlights.map((item, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
+          </div>
 
-            {/* Scholarships - Mobile */}
+          {/* Scholarships - Mobile */}
+          <div className="relative pl-12 mb-6">
+            <div className="absolute left-0 top-4 z-20">
+              <motion.div
+                className="w-8 h-8 bg-secondary rounded-full"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                style={{ boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)' }}
+              >
+                <motion.div 
+                  className="absolute inset-0 rounded-full"
+                  animate={{ boxShadow: ['0 0 0 0px rgba(229, 184, 11, 0.8)', '0 0 0 12px rgba(229, 184, 11, 0)'] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
+              </motion.div>
+            </div>
             <motion.div
               className="mb-6 bg-secondary/5 p-5 rounded-2xl shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -427,42 +376,49 @@ const Academics = () => {
             >
               <h3 className="text-xl font-bold mb-4 text-secondary">Scholarships</h3>
               <ul className="space-y-4">
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Chinese Government Scholarship (CSC)</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Xiamen University Merit Scholarship</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">International Student Excellence Award</span>
-                </li>
+                {scholarshipPoints.map((pt, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
+                    <span className="text-gray-300">{pt}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
+          </div>
 
+          {/* Honors - Mobile */}
+          <div className="relative pl-12 mb-6">
+            <div className="absolute left-0 top-4 z-20">
+              <motion.div
+                className="w-8 h-8 bg-secondary rounded-full"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                style={{ boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)' }}
+              >
+                <motion.div 
+                  className="absolute inset-0 rounded-full"
+                  animate={{ boxShadow: ['0 0 0 0px rgba(229, 184, 11, 0.8)', '0 0 0 12px rgba(229, 184, 11, 0)'] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
+              </motion.div>
+            </div>
             <motion.div
               className="mb-6 bg-secondary/5 p-5 rounded-2xl shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <h3 className="text-xl font-bold mb-4 text-secondary">Scholarships</h3>
+              <h3 className="text-xl font-bold mb-4 text-secondary">Received Honors</h3>
               <ul className="space-y-4">
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Chinese Government Scholarship (CSC)</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">Xiamen University Merit Scholarship</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-300">International Student Excellence Award</span>
-                </li>
+                {honorLines.map((line, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
+                    <span className="text-gray-300">{line}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>
