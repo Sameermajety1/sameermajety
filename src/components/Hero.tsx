@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Light overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90" />
       
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 pt-16 z-10">

@@ -108,7 +108,7 @@ const Academics = () => {
                   <ul className="space-y-4">
                     {academicHighlights.map((item, idx) => (
                       <li key={idx} className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">{item}</span>
+                        <span className="text-right text-gray">{item}</span>
                         <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
                       </li>
                     ))}
@@ -154,8 +154,8 @@ const Academics = () => {
                 >
                   <h3 className="text-3xl font-bold mb-2">Bachelor of Medicine and Bachelor of Surgery</h3>
                   <p className="text-xl mb-1">The School of Medicine, <br/> Xiamen University</p>
-                  <p className="text-gray-400">China</p>
-                  <p className="text-gray-400 mt-2">Graduated in June 2025</p>
+                  <p className="text-gray">China</p>
+                  <p className="text-gray mt-2">Graduated in June 2025</p>
                 </motion.div>
               </div>
             </div>
@@ -174,7 +174,7 @@ const Academics = () => {
                   <ul className="space-y-4">
                     {scholarshipPoints.map((pt, idx) => (
                       <li key={idx} className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">{pt}</span>
+                        <span className="text-right text-gray">{pt}</span>
                         <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
                       </li>
                     ))}
@@ -226,7 +226,7 @@ const Academics = () => {
                   <ul className="space-y-4">
                     {honorLines.map((line, idx) => (
                       <li key={idx} className="flex items-center justify-end">
-                        <span className="text-right text-gray-300">{line}</span>
+                        <span className="text-right text-gray">{line}</span>
                         <span className="w-3 h-3 rounded-full bg-secondary ml-3"></span>
                       </li>
                     ))}
@@ -307,8 +307,8 @@ const Academics = () => {
               
               <h3 className="text-3xl font-bold mb-2">Bachelor of Medicine and Bachelor of Surgery</h3>
               <p className="text-xl mb-1">The School of Medicine, <br/> Xiamen University</p>
-              <p className="text-gray-400">China</p>
-              <p className="text-gray-400 mt-2">Graduated in June 2025</p>
+              <p className="text-gray">China</p>
+              <p className="text-gray mt-2">Graduated in June 2025</p>
             </motion.div>
           </div>
           
@@ -342,7 +342,7 @@ const Academics = () => {
                 {academicHighlights.map((item, idx) => (
                   <li key={idx} className="flex items-center">
                     <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -379,7 +379,7 @@ const Academics = () => {
                 {scholarshipPoints.map((pt, idx) => (
                   <li key={idx} className="flex items-center">
                     <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-300">{pt}</span>
+                    <span className="text-gray">{pt}</span>
                   </li>
                 ))}
               </ul>
@@ -416,7 +416,7 @@ const Academics = () => {
                 {honorLines.map((line, idx) => (
                   <li key={idx} className="flex items-center">
                     <span className="w-3 h-3 rounded-full bg-secondary mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-300">{line}</span>
+                    <span className="text-gray">{line}</span>
                   </li>
                 ))}
               </ul>

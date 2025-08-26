@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-lg' 
+          ? 'bg-primary/95 backdrop-blur-xl shadow-lg' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="font-bold text-lg">
-              <span className="text-gray-800">Sameer</span>
+              <span className="text-light">Sameer</span>
             <span className="text-secondary">Majety</span>
             </span>
           </Link>
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
             <Link
                   key={item.path}
                   to={item.path}
-                  className="relative font-medium transition-colors duration-300 text-gray-800 hover:text-secondary group"
+                  className="relative font-medium transition-colors duration-300 text-light hover:text-secondary group"
             >
               {item.label}
                   {/* Active underline */}

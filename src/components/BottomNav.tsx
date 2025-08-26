@@ -57,7 +57,7 @@ const BottomNav: React.FC = () => {
         {isMenuOpen && (
           <motion.div
             ref={menuRef}
-            className="absolute bottom-full right-4 mb-2 w-48 bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-2xl"
+            className="absolute bottom-full right-4 mb-2 w-48 bg-primary/95 backdrop-blur-xl border border-gray rounded-2xl shadow-2xl"
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -75,12 +75,12 @@ const BottomNav: React.FC = () => {
                     className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
                       isActive 
                         ? 'bg-gradient-to-r from-secondary/10 to-secondary/5 shadow-sm' 
-                        : 'hover:bg-gray-50'
+                        : 'hover:bg-primary/50'
                     }`}
                   >
                     <div className="text-2xl">{item.emoji}</div>
                     <span className={`text-sm font-medium ${
-                      isActive ? 'text-secondary' : 'text-gray-700'
+                      isActive ? 'text-secondary' : 'text-gray'
                     }`}>
                       {item.label}
                     </span>
@@ -102,7 +102,7 @@ const BottomNav: React.FC = () => {
 
       {/* Bottom Navigation Bar */}
       <motion.nav
-        className="bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-lg"
+        className="bg-primary/95 backdrop-blur-xl border-t border-gray shadow-lg"
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -121,7 +121,7 @@ const BottomNav: React.FC = () => {
                   className={`relative p-3 rounded-full transition-all duration-200 ${
                     isActive 
                       ? 'bg-gradient-to-br from-secondary to-secondary/80 shadow-lg' 
-                      : 'hover:bg-gray-100'
+                      : 'hover:bg-primary/50'
                   }`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -137,7 +137,7 @@ const BottomNav: React.FC = () => {
                   )}
                 </motion.div>
                 <span className={`text-xs mt-1 font-medium truncate ${
-                  isActive ? 'text-secondary' : 'text-gray-500'
+                  isActive ? 'text-secondary' : 'text-gray'
                 }`}>
                   {item.label}
                 </span>
@@ -151,8 +151,8 @@ const BottomNav: React.FC = () => {
               onClick={toggleMenu}
               className={`relative p-3 rounded-full transition-all duration-200 ${
                 isMenuOpen 
-                  ? 'bg-gradient-to-br from-gray-600 to-gray-700 text-white shadow-lg' 
-                  : 'hover:bg-gray-100'
+                  ? 'bg-gradient-to-br from-gray-600 to-gray-700 text-light shadow-lg' 
+                  : 'hover:bg-primary/50'
               }`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -160,7 +160,7 @@ const BottomNav: React.FC = () => {
               <div className="text-2xl">🍔</div>
             </motion.button>
             <span className={`text-xs mt-1 font-medium truncate ${
-              isMenuOpen ? 'text-gray-700' : 'text-gray-500'
+              isMenuOpen ? 'text-gray' : 'text-gray'
             }`}>
               Menu
             </span>

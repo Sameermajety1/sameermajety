@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,12 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FFFFFF",     // White background
-        secondary: "#4FADF3",   // Light Medical Blue
-        accent: "#0047AB",      // Blue
-        glow: "#DC143C",        // Red (Crimson)
-        light: "#0F172A",       // Dark text
-        gray: "#64748B"         // Cool Gray
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        glow: 'rgb(var(--color-glow) / <alpha-value>)',
+        light: 'rgb(var(--color-light) / <alpha-value>)',
+        gray: 'rgb(var(--color-gray) / <alpha-value>)'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -13,7 +13,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="hidden md:block bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-t border-blue-200 pt-20 pb-10 relative overflow-hidden">
+    <footer className="hidden md:block bg-gradient-to-br from-primary via-primary to-primary border-t border-gray pt-20 pb-10 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -65,7 +65,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.h3 
-              className="text-2xl font-bold mb-6 relative inline-block text-gray-800"
+              className="text-2xl font-bold mb-6 relative inline-block text-light"
               whileHover={{ x: 5 }}
             >
               Sameer Majety
@@ -77,7 +77,7 @@ const Footer = () => {
                 transition={{ delay: 0.3, duration: 0.6 }}
               />
             </motion.h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray mb-6 leading-relaxed">
               Exploring the intersection of medicine, research, and innovation to 
               create meaningful impact in healthcare.
             </p>
@@ -117,7 +117,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-xl font-bold mb-6 text-gray-800 relative">
+            <h3 className="text-xl font-bold mb-6 text-light relative">
               Quick Links
               <motion.div 
                 className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500"
@@ -148,7 +148,7 @@ const Footer = () => {
                 >
                   <Link 
                     to={item.link} 
-                    className="text-gray-700 hover:text-indigo-600 transition-all duration-300 flex items-center group font-medium"
+                    className="text-gray hover:text-secondary transition-all duration-300 flex items-center group font-medium"
                   >
                     <motion.div
                       className="mr-3 text-indigo-500 group-hover:text-indigo-600 transition-colors"
@@ -165,7 +165,7 @@ const Footer = () => {
         </div>
           
           <motion.div
-          className="border-t border-indigo-200 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm"
+          className="border-t border-gray pt-8 flex flex-col md:flex-row justify-between items-center text-gray text-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -181,7 +181,7 @@ const Footer = () => {
               <motion.a 
                   key={index}
                 href={item.link} 
-                className="hover:text-indigo-600 transition-colors font-medium"
+                className="hover:text-secondary transition-colors font-medium"
                 whileHover={{ y: -2 }}
               >
                 {item.title}

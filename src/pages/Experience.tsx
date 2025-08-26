@@ -177,7 +177,7 @@ const Experience = () => {
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">August 2025 - September 2025</span>
                   <h3 className="text-2xl font-bold mb-2">Research Assistant - Internal Medicine</h3>
                   <p className="text-lg mb-1 italic">Nnn, Baton Rouge, LA, United States of America</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
                   </p>
                 </motion.div>
@@ -229,7 +229,7 @@ const Experience = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2"> Internal Medicine Observership (Outpatient)</h3>
                   <p className="text-lg mb-1 italic"> Corewell Health, Dearborn, MI, United States of America</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
                   </p>
                 </motion.div>
@@ -287,7 +287,7 @@ const Experience = () => {
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">May 2025 - June 2025</span>
                   <h3 className="text-2xl font-bold mb-2">Internal Medicine Observership (Outpatient)</h3>
                   <p className="text-lg mb-1 italic">Curewell Medical Center,  Chicago, IL, United States of America</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
                   </p>
                 </motion.div>
@@ -340,7 +340,7 @@ const Experience = () => {
                   <h3 className="text-2xl font-bold mb-2">Tutor and Mentor</h3>
                   <p className="text-lg mb-1 italic">Interdisciplinary Medical Research Consortium
                   IMRC, Hyderabad, India</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Medical Education
                   </p>
                 </motion.div>
@@ -398,7 +398,7 @@ const Experience = () => {
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">March 2024 - Present</span>
                   <h3 className="text-2xl font-bold mb-2"> Founder and Mentor - Competitive Exam Mentorship Program</h3>
                   <p className="text-lg mb-1 italic"> School of Medicine, Xiamen University, Xiamen, China</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Medical Education
                   </p>
                 </motion.div>
@@ -450,7 +450,7 @@ const Experience = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Medical Volunteer Doctor</h3>
                   <p className="text-lg mb-1 italic">Indian Red Cross Society, Kakinada, 533001, India</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Community involvement / Outreach
                   </p>
                 </motion.div>
@@ -508,7 +508,7 @@ const Experience = () => {
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">September 2022 - Septempber 2023</span>
                   <h3 className="text-2xl font-bold mb-2">Clinical Intern</h3>
                   <p className="text-lg mb-1 italic">Rangaraya Medical College, Kakinada, 533001, India</p>
-                  <p className="text-gray-300 mt-3">
+                  <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
                   </p>
                 </motion.div>
@@ -618,7 +618,7 @@ const Experience = () => {
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">{item.date}</span>
                   <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                   <p className="text-lg mb-1 italic">{item.location}</p>
-                  <p className="text-gray-300 mt-3">{item.focus}</p>
+                  <p className="text-gray mt-3">{item.focus}</p>
                 </motion.div>
               </div>
             ))}

@@ -185,21 +185,21 @@ const PersonalLife = () => {
                       
                       <div className="space-y-4">
                         <motion.div 
-                          className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20"
+                          className="flex items-center gap-4 bg-primary/10 backdrop-blur-sm p-4 rounded-xl border border-gray/20"
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                         >
                           <FaMedal className="text-yellow-400 text-xl" />
                           <span className="text-white font-semibold">State Level Gold Medalist</span>
                         </motion.div>
                         <motion.div 
-                          className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20"
+                          className="flex items-center gap-4 bg-primary/10 backdrop-blur-sm p-4 rounded-xl border border-gray/20"
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                         >
                           <span className="text-2xl">🏆</span>
                           <span className="text-white font-semibold">District Champion (7+ years)</span>
                         </motion.div>
                         <motion.div 
-                          className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20"
+                          className="flex items-center gap-4 bg-primary/10 backdrop-blur-sm p-4 rounded-xl border border-gray/20"
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                         >
                           <span className="text-2xl">🥇</span>
@@ -209,7 +209,7 @@ const PersonalLife = () => {
                     </div>
                     
                     <div className="text-center">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                      <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 border border-gray/20">
                         <h6 className="text-2xl font-bold text-white mb-6">Other Sports</h6>
                         <div className="space-y-4">
                           {/* Swimming Card */}

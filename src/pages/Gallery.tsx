@@ -223,7 +223,7 @@ const Gallery = () => {
               onClick={() => openModal(image)}
             >
               {/* Glassy Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 border border-gray/20 rounded-2xl" />
               
               {/* Image */}
               <img
@@ -259,14 +259,14 @@ const Gallery = () => {
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeModal}
           >
             <motion.div
-              className="relative w-[90vw] max-w-5xl h-[80vh] bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl border border-white/30 overflow-hidden shadow-2xl"
+              className="relative w-[90vw] max-w-5xl h-[80vh] bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl border border-white/30 overflow-hidden shadow-2xl dark:from-primary/95 dark:to-primary/95 dark:border-gray"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -276,7 +276,7 @@ const Gallery = () => {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-200 hover:scale-110"
+                className="absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-200 hover:scale-110 dark:bg-light/20 dark:hover:bg-light/30"
               >
                 <FaTimes className="text-white text-xl" />
               </button>
@@ -293,7 +293,7 @@ const Gallery = () => {
                 </div>
 
                 {/* Content Section - Fixed Size */}
-                <div className="lg:w-[40%] h-[50%] lg:h-full p-6 lg:p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-t lg:border-t-0 lg:border-l border-white/20 overflow-y-auto">
+                <div className="lg:w-[40%] h-[50%] lg:h-full p-6 lg:p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-t lg:border-t-0 lg:border-l border-white/20 overflow-y-auto dark:from-primary/10 dark:to-primary/5 dark:border-gray/20">
                   <div className="h-full flex flex-col justify-start">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-secondary/20 backdrop-blur-sm rounded-full p-2">

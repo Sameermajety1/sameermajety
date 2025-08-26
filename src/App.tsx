@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
 import Home from './pages/Home';
 import Academics from './pages/Academics';
 import Experience from './pages/Experience';
@@ -51,6 +52,7 @@ function App() {
         </main>
 
         <BottomNav />
+        <ThemeToggle />
         <Footer />
       </div>
     </Router>

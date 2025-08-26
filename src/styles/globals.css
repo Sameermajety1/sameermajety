@@ -4,17 +4,24 @@
 
 @layer base {
   :root {
-    --color-primary: 15 23 42; /* #0F172A - Midnight Navy */
-    --color-secondary: 79 173 243; /* #4FADF3 - Light Medical Blue */
-    --color-accent: 4 71 171; /* #0047AB - Blue */
-    --color-glow: 220 20 60; /* #DC143C - Red */
-    --color-light: 248 250 252; /* #F8FAFC - Soft White */
-    --color-gray: 148 163 184; /* #94A3B8 - Cool Gray */
+    --color-primary: 255 255 255; /* Light mode background */
+    --color-secondary: 79 173 243; /* Light Medical Blue */
+    --color-accent: 4 71 171; /* Blue */
+    --color-glow: 220 20 60; /* Red */
+    --color-light: 15 23 42; /* Dark text */
+    --color-gray: 100 116 139; /* Cool Gray */
   }
 
-  body {
-    @apply bg-primary text-light;
+  .dark {
+    --color-primary: 15 23 42; /* Dark mode background */
+    --color-secondary: 79 173 243;
+    --color-accent: 4 71 171;
+    --color-glow: 220 20 60;
+    --color-light: 248 250 252; /* Light text */
+    --color-gray: 148 163 184;
   }
+
+  body { @apply bg-primary text-light; }
 
   /* Smooth scrolling for page navigation */
   html {
