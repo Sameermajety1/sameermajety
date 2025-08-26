@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   FaLinkedin, 
   FaGithub, 
@@ -11,6 +10,17 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
   
   return (
     <footer className="hidden md:block bg-gradient-to-br from-primary via-primary to-primary border-t border-gray pt-20 pb-10 relative overflow-hidden">
@@ -83,10 +93,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: FaXTwitter, hover: "#000000", link: "https://twitter.com/sameermajety", bg: "from-slate-800 to-slate-900" },
-                { icon: FaLinkedin, hover: "#0A66C2", link: "https://linkedin.com/in/sameermajety", bg: "from-indigo-400 to-indigo-500" },
-                { icon: FaGithub, hover: "#333333", link: "https://github.com/sameermajety", bg: "from-slate-700 to-slate-800" },
-                { icon: FaInstagram, hover: "#E4405F", link: "https://instagram.com/sameermajety", bg: "from-pink-400 to-purple-500" }
+                
+                { icon: FaLinkedin, hover: "#0A66C2", link: "https://www.linkedin.com/in/sameer-majety-a9a81221a/", bg: "from-indigo-400 to-indigo-500" },
+                
+                { icon: FaInstagram, hover: "#E4405F", link: "https://www.instagram.com/theonlysameermajety/", bg: "from-pink-400 to-purple-500" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -129,14 +139,14 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                { title: "Home", link: "/" },
-                { title: "Academics", link: "/academics" },
-                { title: "Experience", link: "/experience" },
-                { title: "Research & Publications", link: "/research-publications" },
-                { title: "Leadership & Service", link: "/leadership-and-service" },
-                { title: "Life", link: "/personal-life" },
-                { title: "Gallery", link: "/gallery" },
-                { title: "Contact", link: "/contact" }
+                { title: "Home", sectionId: "home" },
+                { title: "Academics", sectionId: "academics" },
+                { title: "Experience", sectionId: "experience" },
+                { title: "Research & Publications", sectionId: "research-publications" },
+                { title: "Leadership & Service", sectionId: "leadership-and-service" },
+                { title: "Life", sectionId: "personal-life" },
+                { title: "Gallery", sectionId: "gallery" },
+                { title: "Contact", sectionId: "contact" }
               ].map((item, index) => (
                 <motion.li 
                   key={index} 
@@ -146,9 +156,9 @@ const Footer = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.05 * index, duration: 0.4 }}
                 >
-                  <Link 
-                    to={item.link} 
-                    className="text-gray hover:text-secondary transition-all duration-300 flex items-center group font-medium"
+                  <button 
+                    onClick={() => scrollToSection(item.sectionId)}
+                    className="text-gray hover:text-secondary transition-all duration-300 flex items-center group font-medium cursor-pointer"
                   >
                     <motion.div
                       className="mr-3 text-indigo-500 group-hover:text-indigo-600 transition-colors"
@@ -157,7 +167,7 @@ const Footer = () => {
                       <FaArrowRight className="text-sm" />
                     </motion.div>
                     {item.title}
-                  </Link>
+                  </button>
                 </motion.li>
               ))}
             </ul>

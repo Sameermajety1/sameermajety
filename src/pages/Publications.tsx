@@ -14,10 +14,11 @@ interface Publication {
   link: string;
 }
 
-// Posters have fewer fields and no links/abstracts
-interface PosterPresentation {
+// Conference and Poster presentations have the same structure
+interface ConferencePresentation {
   title: string;
   journal: string;
+  conference: string;
   year: number;
   date: string;
   authors: string;
@@ -75,20 +76,30 @@ const peerReviewedPublications: Publication[] = [
     link: "https://pubmed.ncbi.nlm.nih.gov/40337403/#:~:text=This%20case%20series%20is%20a,varying%20amounts%20of%20paraquat%20dichloride."
   },
   {
-    title: "Blockchain in Healthcare Data ManagementThe interplay of immunity and growth: a case of combined variable immunodeficiency and growth hormone deficiency. ",
-    journal: "Annals of Medicine and Surgery",
-    year: 2024,
-    date: "November",
-    authors: "Majety SK, Modh S, Mishra D, Alam N, Suvvari TK, Pagadala CGM, Muppana G.",
-    abstract: "",
-    link: "#"
-  },
-  {
     title: "A case report of tuberculous meningitis resulting in irreversible visual impairment due to delayed diagnosis",
     journal: "Clinical Case Reports",
     year: 2024,
     date: "August",
     authors: "Lin EL, Gulhane SA, Majety SK, Lakkamaneni ST, Lekkala P.",
+    abstract: "Prompt diagnosis of tuberculous meningitis (TBM) is crucial to prevent severe complications like cranial nerve involvement and irreversible visual impairment. Early suspicion and intervention are essential, especially in tuberculosis-endemic regions. Rapid initiation of anti-tuberculosis therapy and vigilant monitoring for complications, such as hydrocephalus, improve patient outcomes and prevent long-term disabilities.",
+    keywords: ["Ventriculo‐Peritoneal Shunt","Irreversible Vision Loss","Tuberculosis","Tuberculosis and Meningitis."],
+    link: "https://pubmed.ncbi.nlm.nih.gov/39165497/"
+  },
+  {
+    title: "Hidden Hunger: The Alarming Rise of Protein-Energy Malnutrition in Older Adults of High-Income Countries",
+    journal: "Journal of American Geriatic Society",
+    year: 2025,
+    date: "April",
+    authors: "Ponnaluri A, Majety SK, Musallam S, Agarwal S, Rangan P, Agarwal N.",
+    abstract: "",
+    link: "https://static.coreapps.net/ags2025/documents/1acd42e270a15476cc56bf89c79bb4b2.pdf"
+  },
+  {
+    title: "The interplay of immunity and growth: a case of combined variable immunodeficiency and growth hormone deficiency.",
+    journal: "Annals of Medicine and Surgery",
+    year: 2024,
+    date: "November",
+    authors: "Majety SK, Modh S, Mishra D, Alam N, Suvvari TK, Pagadala CGM, Muppana G.",
     abstract: "",
     link: "#"
   },
@@ -101,133 +112,85 @@ const peerReviewedPublications: Publication[] = [
     abstract: "",
     link: "#"
   },
+  
+];
+
+const conferencePublications: ConferencePresentation[] = [
   {
-    title: "Hidden Hunger: The Alarming Rise of Protein-Energy Malnutrition in Older Adults of High-Income Countries",
-    journal: "Journal of American Geriatic Society",
+    title: "Geographic and Demographic Patterns of Rheumatoid Arthritis in the United States: Insights from GBD 2021.",
+    journal: "Arthritis & Rheumatology",
+    conference: "American College of Rheumatology Convergence 2025",
     year: 2025,
-    date: "April",
-    authors: "Ponnaluri A, Majety SK, Musallam S, Agarwal S, Rangan P, Agarwal N.",
-    abstract: "",
-    link: "#"
+    date: "August",
+    authors: "Chirumalla P, Majety SK, Nimmagadda R, Medarametla R, Sunkara P, Bandurapalli P, Cherukuri M, Anne H."
+  },
+  {
+    title: "Geographic, Gender, and Age Disparities in Aortic Aneurysm Burden: Insights from GBD 2021 U.S. Data",
+    journal: "Circulation",
+    conference: "American Heart Association Scientific Sessions 2025",
+    year: 2025,
+    date: "August",
+    authors: "Majety SK, Vedamurthy D, Anne H, Kamadi H, Sakalabaktula KSK."
+  },
+  {
+    title: " Disparities in Colorectal Cancer Burden and Risk by State and Sex in the United States: A Comprehensive Analysis of GBD 2021 Data.",
+    journal: "The American Journal of Gastroenterology",
+    conference: "American College of Gastroenterology 2025",
+    year: 2025,
+    date: "July",
+    authors: "Nimmagadda R, Majety SK, Munnagi P, Tummala N, Shaik N, Udaikumar J, Potluri V."
+  },
+  {
+    title: "Geographic and Risk Factor Disparities in Stomach and Esophageal Cancer Burden Across the U.S.: Findings from GBD 2021.",
+    journal: "The American Journal of Gastroenterology (AJG)",
+    conference: "American College of Gastroenterology 2025",
+    year: 2025,
+    date: "July",
+    authors: "Nimmagadda R, Majety SK, Tummala N, Vakkalagadda NP, Munnagi P, Kamadi H, Potluri V, Cherukuru S, Sakalabaktula KSK."
+  },
+  {
+    title: "Heterogeneity in Randomized Controlled Trials of Corticosteroid Use for Alcoholic Hepatitis: Implications for Efficacy and Infection Risk.",
+    journal: "American Journal of Gastroenterology (AJG)",
+    conference: "American College of Gastroenterology 2025",
+    year: 2025,
+    date: "July",
+    authors: "Nimmagadda R, Munnagi P, Vakkalagadda NP, Potluri V, Majety SK, Cherukuri S, Tummala N."
+  },
+  {
+    title: "A Rare Foregut Duplication Cyst With Steatocystomatous Differentiation Presenting With Dysphagia and Vocal Cord Palsy.",
+    journal: "The American Journal of Gastroenterology (AJG)",
+    conference: "American College of Gastroenterology 2025",
+    year: 2025,
+    date: "July",
+    authors: "Sakalabaktula KSK, Divity S, Majety SK, Divity SK."
   }
 ];
 
-const conferencePublications: Publication[] = [
-  {
-    title: "Next-Generation Healthcare: AI and Beyond",
-    journal: "International Medical Innovation Conference",
-    year: 2023,
-    date: "July 2023",
-    authors: "Majety S.K., Roberts A.",
-    abstract: "Keynote presentation on the future of healthcare technology, focusing on AI integration and emerging technologies.",
-    keywords: ["Healthcare Innovation", "Artificial Intelligence", "Future Tech"],
-    impactFactor: 4.0,
-    link: "#"
-  },
-  {
-    title: "Remote Patient Monitoring Systems",
-    journal: "Global Digital Health Summit",
-    year: 2023,
-    date: "May 2023",
-    authors: "Majety S.K., White B.",
-    abstract: "Presentation on innovative remote patient monitoring systems and their impact on healthcare delivery.",
-    keywords: ["Remote Monitoring", "Digital Health", "Patient Care"],
-    impactFactor: 3.8,
-    link: "#"
-  },
-  {
-    title: "ML Models in Medical Imaging Analysis",
-    journal: "Medical AI Symposium",
-    year: 2022,
-    date: "November 2022",
-    authors: "Majety S.K., Garcia M.",
-    abstract: "Discussion of advanced machine learning models in medical imaging analysis and diagnosis.",
-    keywords: ["Machine Learning", "Medical Imaging", "AI"],
-    impactFactor: 3.9,
-    link: "#"
-  },
-  {
-    title: "Cybersecurity in Healthcare Systems",
-    journal: "Healthcare Security Conference",
-    year: 2022,
-    date: "August 2022",
-    authors: "Majety S.K., Lee J.",
-    abstract: "Analysis of cybersecurity challenges and solutions in modern healthcare systems.",
-    keywords: ["Cybersecurity", "Healthcare IT", "Data Protection"],
-    impactFactor: 3.7,
-    link: "#"
-  },
-  {
-    title: "Digital Transformation in Clinical Trials",
-    journal: "Clinical Research Innovation Forum",
-    year: 2022,
-    date: "June 2022",
-    authors: "Majety S.K., Taylor R.",
-    abstract: "Exploring digital technologies in modernizing clinical trial processes.",
-    keywords: ["Clinical Trials", "Digital Transformation", "Research"],
-    impactFactor: 3.6,
-    link: "#"
-  },
-  {
-    title: "Smart Hospitals: IoT Integration",
-    journal: "Healthcare Technology Summit",
-    year: 2022,
-    date: "March 2022",
-    authors: "Majety S.K., Kumar P.",
-    abstract: "Discussion on implementing IoT solutions in hospital environments.",
-    keywords: ["IoT", "Smart Hospitals", "Healthcare Technology"],
-    impactFactor: 3.8,
-    link: "#"
-  },
-  {
-    title: "Smart Hospitals: IoT Integration",
-    journal: "Healthcare Technology Summit",
-    year: 2022,
-    date: "March 2022",
-    authors: "Majety S.K., Kumar P.",
-    abstract: "Discussion on implementing IoT solutions in hospital environments.",
-    keywords: ["IoT", "Smart Hospitals", "Healthcare Technology"],
-    impactFactor: 3.8,
-    link: "#"
-  }
-];
-
-// Posters: no abstract/keywords/links
-const posterPresentations: PosterPresentation[] = [
-  {
-    title: "State-wise and National Trends of Type 1 and Type 2 Diabetes Mellitus in India: A Systematic Analysis from the Global Burden of Disease Study 2021",
-    journal: "Association of International Research (AIR), Hyderabad, India",
-    year: 2025,
-    date: "06 April",
-    authors: "Majety SK, Kamadi H, Seelam V, Earni SC.",
-  },
-  {
-    title: "Clinical Outcomes and Predictors of Mortality in Paraquat Poisoning: Insights from a Tertiary Care Center in South India",
-    journal: "Association of International Research (AIR), Hyderabad, India",
-    year: 2025,
-    date: "06 April",
-    authors: " Majety SK, Pasam SS, Sakalabaktula KSK, Sandeep C, Pathipaka S, Kathare AR.",
-  },
+// Posters: using same structure as conferences
+const posterPresentations: ConferencePresentation[] = [
   {
     title: "Unequal Burdens: Gender, Geography, and Risk Factors Driving HIV and STI Trends in the U.S.—A GBD 2021",
-    journal: "Based Systematic Analysis States of America",
+    journal: "Open Forum for Infectious Disease (OFID)",
+    conference: " Infectious Disease Society of America's IDWeek 2025",
     year: 2025,
     date: "19 October",
-    authors: "Majety SK, Ponnaluri A, Kamadi H, Mrinmai PK, Earni SC, Seelam V. IDWeek 2025.",
+    authors: "Majety SK, Ponnaluri A, Kamadi H, Mrinmai PK, Earni SC, Seelam V. IDWeek 2025."
   },
   {
     title: "Mapping Respiratory Infection Burden in the U.S.: State-Level and Gender-Specific Insights from GBD 2021",
-    journal: "Atlanta, GA, United States of America",
+    journal: "Open Forum for Infectious Disease (OFID)",
+    conference: "Infectious Disease Society of America's IDWeek 2025",
     year: 2025,
     date: "19 October",
-    authors: "Majety, S. K., Seelam, V., Mrinmai, P. K., Shaik, N., Kamadi, H., & Earni, S. C.",
+    authors: "Majety, S. K., Seelam, V., Mrinmai, P. K., Shaik, N., Kamadi, H., & Earni, S. C."
   },
   {
     title: "Novel and Potential Biomarkers in Prediction and Prognosis of Cryptococcal-IRIS: A Systematic Review.",
-    journal: "Atlanta, GA, United States of America",
+    journal: "Open Forum for Infectious Disease (OFID)",
+    conference: "Infectious Disease Society of America's IDWeek 2025",
     year: 2025,
     date: "19 October",
-    authors: "Mishra D, Alam N, Majety SK.",
+    authors: "Mishra D, Alam N, Majety SK."
   }
 ];
 
@@ -255,15 +218,17 @@ const CompactPublicationCard = ({ pub }: { pub: Publication }) => (
         </span>
       </div>
       
-      <a 
-        href={pub.link} 
-        className="text-secondary text-xs hover:underline flex items-center gap-1 mt-auto"
-      >
-        Read full paper
-        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
+      {pub.link && pub.link !== "#" && (
+        <a 
+          href={pub.link} 
+          className="text-secondary text-xs hover:underline flex items-center gap-1 mt-auto"
+        >
+          Read full paper
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      )}
     </div>
           </motion.div>
 );
@@ -317,22 +282,24 @@ const PublicationCard = ({ pub }: { pub: Publication }) => (
                     </div>
                   )}
                   
+                  {pub.link && pub.link !== "#" && (
                     <a 
                       href={pub.link} 
-                    className="text-secondary text-sm hover:underline flex items-center gap-1"
+                      className="text-secondary text-sm hover:underline flex items-center gap-1"
                     >
                       Read full paper
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
+                  )}
                 </div>
               </div>
             </motion.div>
 );
 
 // Posters: no links/abstracts
-const CompactPosterCard = ({ poster }: { poster: PosterPresentation }) => (
+const CompactPosterCard = ({ poster }: { poster: ConferencePresentation }) => (
   <motion.div 
     className="card group hover:shadow-glow transition-all duration-300 p-3"
     initial={{ opacity: 0, y: 20 }}
@@ -352,6 +319,8 @@ const CompactPosterCard = ({ poster }: { poster: PosterPresentation }) => (
       <div className="text-xs text-gray">
         <span className="text-accent">{poster.journal}</span>
         <span className="mx-1">•</span>
+        <span className="text-accent">{poster.conference}</span>
+        <span className="mx-1">•</span>
         <span>{poster.date}</span>
       </div>
       <div className="text-xs text-gray mt-1">{poster.authors}</div>
@@ -359,7 +328,67 @@ const CompactPosterCard = ({ poster }: { poster: PosterPresentation }) => (
   </motion.div>
 );
 
-const PosterCard = ({ poster }: { poster: PosterPresentation }) => (
+// Conference cards - simplified version
+const CompactConferenceCard = ({ pub }: { pub: ConferencePresentation }) => (
+  <motion.div 
+    className="card group hover:shadow-glow transition-all duration-300 p-3"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    whileHover={{ y: -5 }}
+  >
+    <div className="flex flex-col h-full">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-sm font-bold text-light group-hover:text-secondary transition-colors flex-1 mr-2">
+          {pub.title}
+        </h3>
+        <span className="text-lg font-bold text-secondary whitespace-nowrap">
+          {pub.year}
+        </span>
+      </div>
+      <div className="text-xs text-gray">
+        <span className="text-accent">{pub.journal}</span>
+        <span className="mx-1">•</span>
+        <span className="text-accent">{pub.conference}</span>
+        <span className="mx-1">•</span>
+        <span>{pub.date}</span>
+      </div>
+      <div className="text-xs text-gray mt-1">{pub.authors}</div>
+    </div>
+  </motion.div>
+);
+
+// Conference cards - full size (matching poster cards)
+const ConferenceCard = ({ pub }: { pub: ConferencePresentation }) => (
+  <motion.div 
+    className="card group hover:shadow-glow transition-all duration-300 h-full"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    whileHover={{ y: -5 }}
+  >
+    <div className="p-6 flex flex-col h-full">
+      <div className="flex justify-between items-start mb-3">
+        <h3 className="text-lg font-bold text-light group-hover:text-secondary transition-colors flex-1 mr-4">
+          {pub.title}
+        </h3>
+        <span className="text-2xl font-bold text-secondary whitespace-nowrap">
+          {pub.year}
+        </span>
+      </div>
+      <div className="flex flex-wrap gap-2 mb-2 text-sm">
+        <span className="text-accent">{pub.journal}</span>
+        <span className="text-gray">•</span>
+        <span className="text-accent">{pub.conference}</span>
+        <span className="text-gray">•</span>
+        <span className="text-gray">{pub.date}</span>
+      </div>
+      <div className="text-gray text-sm">{pub.authors}</div>
+    </div>
+  </motion.div>
+);
+
+const PosterCard = ({ poster }: { poster: ConferencePresentation }) => (
   <motion.div 
     className="card group hover:shadow-glow transition-all duration-300 h-full"
     initial={{ opacity: 0, y: 20 }}
@@ -378,6 +407,8 @@ const PosterCard = ({ poster }: { poster: PosterPresentation }) => (
       </div>
       <div className="flex flex-wrap gap-2 mb-2 text-sm">
         <span className="text-accent">{poster.journal}</span>
+        <span className="text-gray">•</span>
+        <span className="text-accent">{poster.conference}</span>
         <span className="text-gray">•</span>
         <span className="text-gray">{poster.date}</span>
       </div>
@@ -502,8 +533,17 @@ const Publications = () => {
 
           {/* Collaborate CTA Button */}
           <motion.a
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-accent via-secondary to-accent bg-[length:200%_200%] text-white font-bold shadow-lg hover:shadow-accent/20 transition-all duration-300"
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                const offsetTop = element.offsetTop - 80;
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-accent via-secondary to-accent bg-[length:200%_200%] text-white font-bold shadow-lg hover:shadow-accent/20 transition-all duration-300 cursor-pointer"
             whileHover={{ 
               scale: 1.05,
               backgroundPosition: ['0% 0%', '100% 100%']
@@ -515,6 +555,80 @@ const Publications = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </motion.a>
+        </motion.div>
+
+        {/* Research Skills & Article Types Section */}
+        <motion.div 
+          className="max-w-4xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {/* Research Skills Card */}
+          <motion.div
+            className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray/20 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center">
+                <span className="text-xl">🔬</span>
+              </div>
+              <h3 className="text-xl font-bold text-light">Research Skills</h3>
+            </div>
+            <p className="text-gray leading-relaxed">
+              Skilled in research methodology, including data collection, critical appraisal, and manuscript drafting. Proficient in data analysis and interpretation, with familiarity in handling clinical datasets and applying appropriate statistical methods to support evidence-based conclusions.
+            </p>
+          </motion.div>
+
+          {/* Article Types Grid */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            {[
+              { title: "Systematic Reviews & Meta-analyses", icon: "📊", color: "from-blue-500/20 to-cyan-500/20", border: "border-blue-400/30" },
+              { title: "Cross-sectional Studies", icon: "📋", color: "from-green-500/20 to-emerald-500/20", border: "border-green-400/30" },
+              { title: "Case Reports", icon: "🩺", color: "from-purple-500/20 to-violet-500/20", border: "border-purple-400/30" },
+              { title: "Case Series", icon: "📑", color: "from-orange-500/20 to-red-500/20", border: "border-orange-400/30" },
+              { title: "Database Analyses", icon: "💻", color: "from-indigo-500/20 to-blue-500/20", border: "border-indigo-400/30" },
+              { title: "GBD-based Systematic Analyses", icon: "🌍", color: "from-teal-500/20 to-cyan-500/20", border: "border-teal-400/30" }
+            ].map((type, index) => (
+              <motion.div
+                key={index}
+                className={`bg-gradient-to-br ${type.color} backdrop-blur-sm rounded-xl p-4 border ${type.border} shadow-lg cursor-pointer group`}
+                whileHover={{ 
+                  y: -5, 
+                  scale: 1.02,
+                  boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <motion.div 
+                    className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {type.icon}
+                  </motion.div>
+                  <h4 className="text-sm font-semibold text-light group-hover:text-secondary transition-colors duration-300">
+                    {type.title}
+                  </h4>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Publications Sections */}
@@ -623,7 +737,7 @@ const Publications = () => {
                   viewport={{ once: true }}
                 />
                 <h3 className="text-2xl md:text-3xl font-bold text-light relative z-10">
-                  Work with International <span className="gradient-text">Conferences</span>
+                  Work In International <span className="gradient-text">Conferences</span>
                 </h3>
               </div>
             </motion.div>
@@ -634,7 +748,7 @@ const Publications = () => {
               {/* First 6 cards */}
               {publications.conferences.slice(0, 6).map((pub, index) => (
                 <div key={`conf-${index}`}>
-                  <PublicationCard pub={pub} />
+                  <ConferenceCard pub={pub} />
                 </div>
               ))}
 
@@ -644,7 +758,7 @@ const Publications = () => {
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     {publications.conferences.slice(6, 12).map((pub, index) => (
                       <div key={`conf-extra-${index}`}>
-                        <CompactPublicationCard pub={pub} />
+                        <CompactConferenceCard pub={pub} />
                       </div>
                     ))}
                   </div>
@@ -699,7 +813,7 @@ const Publications = () => {
                   viewport={{ once: true }}
                 />
                 <h3 className="text-2xl md:text-3xl font-bold text-light relative z-10">
-                  Paper <span className="gradient-text">Presentations</span>
+                  Poster <span className="gradient-text">Presentations</span>
                 </h3>
               </div>
             </motion.div>
@@ -775,7 +889,7 @@ const Publications = () => {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <StatCard title="Under Review" count={8} icon="🔎" />
+              <StatCard title="Under Review" count={16} icon="🔎" />
               <StatCard title="Ongoing Projects" count={6} icon="🚀" />
             </motion.div>
           </motion.section>

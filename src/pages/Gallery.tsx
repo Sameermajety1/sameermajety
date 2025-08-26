@@ -143,7 +143,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="relative min-h-screen" id="gallery">
+    <div className="relative min-h-screen">
       {/* Floating Elements */}
       <FloatingParticle
         size={4}

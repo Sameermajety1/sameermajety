@@ -1,27 +1,44 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const BottomNav: React.FC = () => {
-  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Update active section based on scroll position
+      const sections = ['home', 'academics', 'experience', 'research-publications', 'leadership-and-service', 'personal-life', 'gallery', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Navigation items with emoji icons
   const navItems = [
-    { path: '/', emoji: '🏠', label: 'Home', color: '#4FADF3' },
-    { path: '/academics', emoji: '🎓', label: 'Academics', color: '#10B981' },
-    { path: '/experience', emoji: '💼', label: 'Experience', color: '#F59E0B' },
-    { path: '/research-publications', emoji: '📚', label: 'Research', color: '#EF4444' },
-    { path: '/leadership-and-service', emoji: '👑', label: 'Leadership', color: '#8B5CF6' },
-    
+    { path: 'home', emoji: '🏠', label: 'Home', color: '#4FADF3' },
+    { path: 'academics', emoji: '🎓', label: 'Academics', color: '#10B981' },
+    { path: 'experience', emoji: '💼', label: 'Experience', color: '#F59E0B' },
+    { path: 'research-publications', emoji: '📚', label: 'Research', color: '#EF4444' },
+    { path: 'leadership-and-service', emoji: '👑', label: 'Leadership', color: '#8B5CF6' },
   ];
 
   // Additional menu items (not in main nav)
   const menuItems = [
-    { path: '/personal-life', emoji: '❤️', label: 'Life', color: '#EC4899' },
-    { path: '/gallery', emoji: '📸', label: 'Gallery', color: '#06B6D4' },
-    { path: '/contact', emoji: '📧', label: 'Contact', color: '#84CC16' }
+    { path: 'personal-life', emoji: '❤️', label: 'Life', color: '#EC4899' },
+    { path: 'gallery', emoji: '📸', label: 'Gallery', color: '#06B6D4' },
+    { path: 'contact', emoji: '📧', label: 'Contact', color: '#84CC16' }
   ];
 
   // Handle click outside to close menu
@@ -50,6 +67,18 @@ const BottomNav: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    closeMenu();
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden">
       {/* Menu Dropdown - Right Corner Above Bottom Bar */}
@@ -65,14 +94,13 @@ const BottomNav: React.FC = () => {
           >
             <div className="p-3 space-y-2">
               {menuItems.map((item) => {
-                const isActive = location.pathname === item.path;
+                const isActive = activeSection === item.path;
                 
                 return (
-                  <Link
+                  <button
                     key={item.path}
-                    to={item.path}
-                    onClick={closeMenu}
-                    className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
+                    onClick={() => scrollToSection(item.path)}
+                    className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 w-full text-left ${
                       isActive 
                         ? 'bg-gradient-to-r from-secondary/10 to-secondary/5 shadow-sm' 
                         : 'hover:bg-primary/50'
@@ -92,7 +120,7 @@ const BottomNav: React.FC = () => {
                         transition={{ duration: 0.2 }}
                       />
                     )}
-                  </Link>
+                  </button>
                 );
               })}
             </div>
@@ -109,12 +137,12 @@ const BottomNav: React.FC = () => {
       >
         <div className="flex justify-around items-center px-2 py-3">
           {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
+            const isActive = activeSection === item.path;
             
             return (
-              <Link
+              <button
                 key={item.path}
-                to={item.path}
+                onClick={() => scrollToSection(item.path)}
                 className="flex flex-col items-center justify-center min-w-0 flex-1 px-2 py-1"
               >
                 <motion.div
@@ -141,7 +169,7 @@ const BottomNav: React.FC = () => {
                 }`}>
                   {item.label}
                 </span>
-              </Link>
+              </button>
             );
           })}
           

@@ -8,10 +8,15 @@ const academicHighlights: string[] = [
   'President of Student Union',
 ];
 
-const scholarshipPoints: string[] = ['1', '2', '3', '4', '5', '6'];
+const scholarshipPoints: string[] = ['Overall Excellence Scholarship 2022 - 1st Position',
+   'Overall Excellence Scholarship 2020 - 1st Position', 
+   'Chinese Scholarship Council Scholarship', 
+   'Overall Excellence Scholarship 2019 - 1st Position', 
+   '99th Xiamen University Anniversary Scholarship', 
+   'Overall Excellence Scholarship 2018 - 2nd Position'];
 
 const honorLines: string[] = [
-  'Ranked in the top 1% of my batch in the following subjects:',
+  
   'Physiology, Biochemistry, Pathology, Microbiology',
   'Physical Diagnostics, Surgery-II, Orthopedics',
   'Psychiatry and Neurology, Infectious Diseases',
@@ -20,7 +25,7 @@ const honorLines: string[] = [
 
 const Academics = () => {
   return (
-    <div className="relative" id="academics">
+    <div className="relative">
       {/* Add individual floating elements specific to this section */}
       <FloatingParticle
         size={4}
@@ -68,7 +73,7 @@ const Academics = () => {
               Medical <span className="gradient-text">Education</span>
             </motion.h2>
           </motion.div>
-          <motion.p 
+          {/* <motion.p 
             className="text-xl text-gray max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +81,7 @@ const Academics = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             My educational path has been shaped by a relentless pursuit of excellence in medical sciences
-          </motion.p>
+          </motion.p> */}
         </motion.div>
 
         {/* Timeline containers and content remain unchanged below */}
@@ -259,7 +264,7 @@ const Academics = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h3 className="text-3xl font-bold mb-2">Received Honors</h3>
+                  <h3 className="text-3xl font-bold mb-2">Honors</h3>
                 </motion.div>
               </div>
             </div>

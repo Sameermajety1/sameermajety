@@ -56,7 +56,7 @@ const experienceItems = [
 
 const Experience = () => {
   return (
-    <div className="relative" id="experience">
+    <div className="relative">
       {/* Add individual floating elements specific to this section */}
       <FloatingParticle
         size={4}
@@ -101,18 +101,10 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Clinical <span className="gradient-text">Experience</span>
+              <span className="gradient-text">Experience</span>
             </motion.h2>
           </motion.div>
-          <motion.p 
-            className="text-xl text-gray max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            My journey through medical practice and clinical training
-          </motion.p>
+          
         </motion.div>
 
         <div className="flex justify-center">
@@ -174,11 +166,11 @@ const Experience = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">August 2025 - September 2025</span>
+                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">May 2025 - Present</span>
                   <h3 className="text-2xl font-bold mb-2">Research Assistant - Internal Medicine</h3>
-                  <p className="text-lg mb-1 italic">Nnn, Baton Rouge, LA, United States of America</p>
+                  <p className="text-lg mb-1 italic">Cleveland Clinic, Cleveland, OH, United States of America</p>
                   <p className="text-gray mt-3">
-                  Primary Focus: Clinical / Translational science
+                  Primary Focus: Research
                   </p>
                 </motion.div>
               </div>
@@ -240,7 +232,6 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Clinical Extern 2 */}
             <div className="flex items-start relative mb-6">
               {/* Timeline dot in the middle */}
               <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
@@ -284,6 +275,56 @@ const Experience = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
+                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">September 2022 - Present</span>
+                  <h3 className="text-2xl font-bold mb-2">Clinical Intern</h3>
+                  <p className="text-lg mb-1 italic">Rangaraya Medical College, Kakinada, 533001, India</p>
+                  <p className="text-gray mt-3">
+                  Primary Focus: Clinical / Translational science
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Clinical Extern 2 */}
+            <div className="flex items-start relative mb-6">
+              {/* Timeline dot in the middle */}
+              <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
+                <motion.div
+                  className="w-8 h-8 bg-accent rounded-full"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 15 
+                  }}
+                  style={{
+                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
+                  }}
+                >
+                  <motion.div 
+                    className="absolute inset-0 rounded-full"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
+                        '0 0 0 12px rgba(4, 71, 171, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </motion.div>
+              </div>
+
+              {/* Left column empty */}
+              <div className="w-1/2 pr-8 text-right">
+              <motion.div
+                  className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">May 2025 - June 2025</span>
                   <h3 className="text-2xl font-bold mb-2">Internal Medicine Observership (Outpatient)</h3>
                   <p className="text-lg mb-1 italic">Curewell Medical Center,  Chicago, IL, United States of America</p>
@@ -292,7 +333,13 @@ const Experience = () => {
                   </p>
                 </motion.div>
               </div>
+              
+              {/* Right column - Clinical Extern details */}
+              <div className="w-1/2 pl-8">
+                
+              </div>
             </div>
+            
 
             {/* Clinical Extern 3 */}
             <div className="flex items-start relative mb-6">
@@ -327,7 +374,12 @@ const Experience = () => {
 
               {/* Left column - Clinical Extern details */}
               <div className="w-1/2 pr-8 text-right">
-                <motion.div
+                
+              </div>
+              
+              {/* Right column empty */}
+              <div className="w-1/2 pl-8">
+              <motion.div
                   className="mb-6 bg-gradient-to-l from-secondary/5 to-secondary/15 p-5 rounded-2xl shadow-lg"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -344,10 +396,6 @@ const Experience = () => {
                   Primary Focus: Medical Education
                   </p>
                 </motion.div>
-              </div>
-              
-              {/* Right column empty */}
-              <div className="w-1/2 pl-8">
               </div>
             </div>
 
@@ -384,11 +432,7 @@ const Experience = () => {
 
               {/* Left column empty */}
               <div className="w-1/2 pr-8 text-right">
-              </div>
-              
-              {/* Right column - Clinical Extern details */}
-              <div className="w-1/2 pl-8">
-                <motion.div
+              <motion.div
                   className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -402,6 +446,11 @@ const Experience = () => {
                   Primary Focus: Medical Education
                   </p>
                 </motion.div>
+              </div>
+              
+              {/* Right column - Clinical Extern details */}
+              <div className="w-1/2 pl-8">
+                
               </div>
             </div>
 
@@ -438,7 +487,12 @@ const Experience = () => {
 
               {/* Left column - Clinical Extern details */}
               <div className="w-1/2 pr-8 text-right">
-                <motion.div
+                
+              </div>
+              
+              {/* Right column empty */}
+              <div className="w-1/2 pl-8">
+              <motion.div
                   className="mb-6 bg-gradient-to-l from-secondary/5 to-secondary/15 p-5 rounded-2xl shadow-lg"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -455,65 +509,10 @@ const Experience = () => {
                   </p>
                 </motion.div>
               </div>
-              
-              {/* Right column empty */}
-              <div className="w-1/2 pl-8">
-              </div>
             </div>
 
             {/* Clinical Extern 6 */}
-            <div className="flex items-start relative mb-6">
-              {/* Timeline dot in the middle */}
-              <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
-                <motion.div
-                  className="w-8 h-8 bg-accent rounded-full"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 15 
-                  }}
-                  style={{
-                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
-                  }}
-                >
-                  <motion.div 
-                    className="absolute inset-0 rounded-full"
-                    animate={{ 
-                      boxShadow: [
-                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
-                        '0 0 0 12px rgba(4, 71, 171, 0)'
-                      ]
-                    }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                </motion.div>
-              </div>
-
-              {/* Left column empty */}
-              <div className="w-1/2 pr-8 text-right">
-              </div>
-              
-              {/* Right column - Clinical Extern details */}
-              <div className="w-1/2 pl-8">
-                <motion.div
-                  className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">September 2022 - Septempber 2023</span>
-                  <h3 className="text-2xl font-bold mb-2">Clinical Intern</h3>
-                  <p className="text-lg mb-1 italic">Rangaraya Medical College, Kakinada, 533001, India</p>
-                  <p className="text-gray mt-3">
-                  Primary Focus: Clinical / Translational science
-                  </p>
-                </motion.div>
-              </div>
-            </div>
+            
 
             {/* Clinical Extern 7 */}
             <div className="flex items-start relative mb-6">

@@ -71,8 +71,17 @@ const Hero = () => {
               variants={childVariants}
             >
               <motion.a 
-                href="/academics" 
-                className="button-primary w-full sm:w-auto text-base sm:text-lg py-3 px-6 sm:px-8"
+                onClick={() => {
+                  const element = document.getElementById('academics');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="button-primary w-full sm:w-auto text-base sm:text-lg py-3 px-6 sm:px-8 cursor-pointer"
                 whileHover={{ 
                   scale: reducedMotion ? 1 : 1.05,
                   boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
@@ -82,8 +91,17 @@ const Hero = () => {
                 Start Here
               </motion.a>
               <motion.a 
-                href="/contact" 
-                className="button-secondary w-full sm:w-auto text-base sm:text-lg py-3 px-6 sm:px-8"
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="button-secondary w-full sm:w-auto text-base sm:text-lg py-3 px-6 sm:px-8 cursor-pointer"
                 whileHover={{ 
                   scale: reducedMotion ? 1 : 1.05,
                   borderColor: "rgba(59, 130, 246, 0.8)"

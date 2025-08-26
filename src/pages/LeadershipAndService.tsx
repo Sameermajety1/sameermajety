@@ -58,7 +58,7 @@ const leadershipRoles: LeadershipRole[] = [
 
 const LeadershipAndService = () => {
   return (
-    <div className="relative" id="leadership">
+    <div className="relative">
       {/* Add floating elements for visual interest */}
       <FloatingParticle
         size={4}

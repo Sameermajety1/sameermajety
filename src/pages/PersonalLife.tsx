@@ -66,7 +66,7 @@ const PersonalLife = () => {
 
 
   return (
-    <div className="relative" id="personal-life">
+    <div className="relative">
       {/* Floating Elements */}
       <FloatingParticle
         size={4}
@@ -227,7 +227,7 @@ const PersonalLife = () => {
                                 <div>
                                   <h6 className="text-xl font-bold text-white">Swimming</h6>
                                   <div className="flex items-center gap-2">
-                                    <FaMedal className="text-yellow-400" />
+                                    
                                     <span className="text-yellow-300 font-medium text-sm">Indian State Level</span>
                                   </div>
                                 </div>
@@ -266,7 +266,7 @@ const PersonalLife = () => {
                                   <div>
                                     <h6 className="text-lg font-bold text-white">Taekwondo</h6>
                                     <div className="flex items-center gap-1">
-                                      <FaMedal className="text-yellow-400 text-sm" />
+                                      
                                       <span className="text-yellow-300 font-medium text-xs">Indian National Level</span>
                                     </div>
                                   </div>
@@ -278,7 +278,7 @@ const PersonalLife = () => {
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Black Belt Holder</span>
+                                    <span className="text-xs">Blue Belt Holder</span>
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
@@ -303,23 +303,23 @@ const PersonalLife = () => {
                                   <div>
                                     <h6 className="text-lg font-bold text-white">Powerlifting</h6>
                                     <div className="flex items-center gap-1">
-                                      <FaMedal className="text-yellow-400 text-sm" />
-                                      <span className="text-yellow-300 font-medium text-xs">Competitive Level</span>
+                                      
+                                      <span className="text-yellow-300 font-medium text-xs">Professional Level</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="space-y-1">
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Squat</span>
+                                    <span className="text-xs">Squat: 190</span>
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Bench</span>
+                                    <span className="text-xs">Bench: 120</span>
                                   </div>
                                   <div className="flex items-center gap-1 text-white/90 transition-all duration-200 group-hover:text-white">
                                     <span className="w-1 h-1 bg-white rounded-full"></span>
-                                    <span className="text-xs">Deadlift</span>
+                                    <span className="text-xs">Deadlift: 210</span>
                                   </div>
                                 </div>
                               </div>
