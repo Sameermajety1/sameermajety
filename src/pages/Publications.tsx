@@ -500,7 +500,7 @@ const Publications = () => {
         duration={6}
       />
       
-      <div className="container mx-auto px-6 pt-24 pb-10">
+      <div className="container mx-auto px-6 pt-8 md:pt-16 pb-8">
         {/* Header Section */}
         <motion.div 
           className="text-center mb-12"

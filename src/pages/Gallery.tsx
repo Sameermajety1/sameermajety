@@ -21,83 +21,208 @@ const Gallery = () => {
     {
       id: 1,
       src: "/images/gallery/1.jpg",
-      alt: "Roller Skating Achievement",
-      title: "🏅 State Level Gold Medalist",
-      description: "Celebrating the victory at the state-level roller skating championship. This moment represents years of dedication, training, and perseverance in the sport. The gold medal symbolizes not just athletic achievement, but the discipline and commitment that translates into medical excellence.",
-      category: "Sports",
-      width: 'large',
-      height: 'large'
+      alt: "White Water Rafting Adventure",
+      title: "White Water Rafting Adventure",
+      description: "An exhilarating rafting experience navigating through river rapids, showcasing teamwork, thrill, and the beauty of nature.",
+      category: "Travel & Adventure",
+      width: 'small',
+      height: 'small'
     },
     {
       id: 2,
       src: "/images/gallery/2.jpg",
-      alt: "Professional Medical Portrait",
-      title: "👨‍⚕️ Medical Professional",
-      description: "A professional portrait capturing the essence of a dedicated medical professional. This image represents the commitment to patient care, continuous learning, and the compassionate approach that defines excellence in healthcare.",
-      category: "Professional",
-      width: 'medium',
-      height: 'medium'
+      alt: "Night Skating Sprint",
+      title: "Night Skating Sprint",
+      description: "A fun and energetic skating session under the floodlights, capturing speed, balance, and the spirit of friendly competition.",
+      category: "Sports & Lifestyle",
+      width: 'small',
+      height: 'small'
     },
     {
       id: 3,
       src: "/images/gallery/3.jpg",
-      alt: "Medical Conference Presentation",
-      title: "🎤 Research Presentation",
-      description: "Presenting cutting-edge medical research findings at an international conference. This moment showcases the ability to communicate complex medical concepts effectively and contribute to the advancement of medical knowledge.",
-      category: "Research",
-      width: 'medium',
-      height: 'medium'
+      alt: "Academic Excellence Award",
+      title: "Academic Excellence Award",
+      description: "Honored with a certificate of achievement in recognition of outstanding academic performance and dedication to learning.",
+      category: "Achievements",
+      width: 'large',
+      height: 'large'
     },
     {
       id: 4,
       src: "/images/gallery/4.jpg",
-      alt: "Leadership and Public Speaking",
-      title: "🎯 Student Union President",
-      description: "Delivering an inspiring speech as the President of the 5th Student Union at Xiamen University. This leadership role demonstrates the ability to motivate, organize, and represent student interests while balancing academic responsibilities.",
-      category: "Leadership",
-      width: 'medium',
-      height: 'medium'
+      alt: "Moments of Joy",
+      title: "Moments of Joy",
+      description: "A candid moment of happiness shared with laksha, my Great Dane, capturing the bond, playfulness, and unconditional love of pets.",
+      category: "Lifestyle & Personal",
+      width: 'large',
+      height: 'large'
     },
     {
       id: 5,
-      src: "/images/gallery/asram.jpg",
-      alt: "University Campus Life",
-      title: "🎓 Medical School Journey",
-      description: "Memories from the beautiful campus of Xiamen University School of Medicine. This represents the academic journey, friendships formed, and the foundation of medical knowledge that shapes a healthcare professional.",
-      category: "Academic",
+      src: "/images/gallery/5.jpg",
+      alt: "Unconditional Love with Jo & Bruno",
+      title: "Unconditional Love with Jo & Bruno",
+      description: "A heartwarming moment with Jo, my Belgian Malinois, and Bruno, my Rottweiler—capturing the playful bond and unconditional affection they bring every day.",
+      category: "Lifestyle & Pets",
       width: 'small',
       height: 'small'
     },
     {
       id: 6,
-      src: "/images/gallery/bungee.avif",
-      alt: "Adventure Sports Achievement",
-      title: "🪂 World's 2nd Highest Bungee",
-      description: "Conquering fears at the world's second highest bungee jumping location. This adventure represents the courage to face challenges head-on, push personal boundaries, and embrace life's thrilling experiences.",
-      category: "Adventure",
+      src: "/images/gallery/6.jpg",
+      alt: "Research Presentation",
+      title: "Research Presentation",
+      description: "Presented research on state-wise and national trends of diabetes mellitus in India, analyzing data from the Global Burden of Disease Study 2021.",
+      category: "Academic & Achievements",
+      width: 'small',
+      height: 'small'
+    },
+    
+    {
+      id: 7,
+      src: "/images/gallery/7.jpg",
+      alt: "Clinical Research Poster Presentation",
+      title: "Clinical Research Poster Presentation",
+      description: "Presented research on clinical outcomes and predictors of mortality in paraquat poisoning, highlighting the urgent need for awareness and improved treatment strategies.",
+      category: "Academic & Achievements",
       width: 'small',
       height: 'small'
     },
     {
-      id: 7,
-      src: "/images/gallery/hero.png",
-      alt: "Personal Achievement Portrait",
-      title: "🌟 Medical Excellence",
-      description: "A moment of pride representing the culmination of medical education, research achievements, and personal growth. This image captures the dedication to healthcare excellence and the journey of becoming a compassionate medical professional.",
-      category: "Personal",
-      width: 'medium',
-      height: 'medium'
+      id: 9,
+      src: "/images/gallery/9.jpg",
+      alt: "Soaring the Skies",
+      title: "Soaring the Skies",
+      description: "A breathtaking paragliding experience above lush green valleys, embracing the thrill of flight and the beauty of nature from above.",
+      category: "Travel & Adventure",
+      width: 'small',
+      height: 'small'
     },
     {
       id: 8,
-      src: "/images/gallery/1.jpg",
-      alt: "Sports Training Session",
-      title: "💪 Dedicated Training",
-      description: "Intensive training session preparing for national-level competitions. This represents the discipline, consistency, and determination required to excel in both sports and medical practice.",
-      category: "Sports",
+      src: "/images/gallery/8.jpg",
+      alt: "Morning at the Shore with Jo",
+      title: "Morning at the Shore with Jo",
+      description: "A peaceful beachside morning spent with Jo, my Belgian Malinois—capturing the bond of trust and companionship against the backdrop of the sea.",
+      category: "Lifestyle & Pets",
+      width: 'large',
+      height: 'large'
+    },
+    {
+      id: 10,
+      src: "/images/gallery/10.JPG",
+      alt: "The Art of Public Speaking",
+      title: "The Art of Public Speaking",
+      description: "Delivering insights and ideas with confidence on stage — blending knowledge with communication to inspire, inform, and connect with an audience.",
+      category: "Professional & Academic",
+      width: 'large',
+      height: 'large'
+    },
+    {
+      id: 11,
+      src: "/images/gallery/11.jpg",
+      alt: "Reaching New Heights",
+      title: "Reaching New Heights",
+      description: "Standing tall at 4680 meters, surrounded by breathtaking snow-covered peaks and crystal-clear skies, capturing the thrill of high-altitude adventure.",
+      category: "Travel & Adventure",
       width: 'small',
       height: 'small'
-    }
+    },
+    
+    {
+      id: 13,
+      src: "/images/gallery/13.jpeg",
+      alt: "Strength in Balance",
+      title: "Strength in Balance",
+      description: "A powerful handstand on the beach at sunrise, blending strength, focus, and calm with the beauty of nature’s horizon.",
+      category: "TFitness & Lifestyle",
+      width: 'small',
+      height: 'small'
+    },
+    
+    {
+      id: 14,
+      src: "/images/gallery/14.jpg",
+      alt: "Guiding Through Uncertainty",
+      title: "Guiding Through Uncertainty",
+      description: "Delivering a classroom session with thought-provoking discussions, encouraging students to explore diverse academic and career pathways.",
+      category: "Education & Seminars",
+      width: 'small',
+      height: 'small'
+    },
+    {
+      id: 15,
+      src: "/images/gallery/15.jpg",
+      alt: "Union Member’s Address",
+      title: "Union Member’s Address",
+      description: "Delivering a formal speech as a student union representative, highlighting leadership, confidence, and active participation in academic life.",
+      category: "Public Speaking & Leadership",
+      width: 'small',
+      height: 'small'
+    },
+    {
+      id: 12,
+      src: "/images/gallery/12.JPG",
+      alt: "Focused Minds at Work",
+      title: "Focused Minds at Work",
+      description: "A group of learners engaged in a session, capturing focus, curiosity, and collaboration in a bright and inspiring environment.",
+      category: "Events & Portraits",
+      width: 'large',
+      height: 'large'
+    },
+    {
+      id: 19,
+      src: "/images/gallery/19.jpg",
+      alt: "Dancing Spirits",
+      title: "Dancing Spirits",
+      description: "Performing a fun and energetic dance at a welcome party, capturing the joy, rhythm, and excitement of student life.",
+      category: "Events & Celebrations",
+      width: 'large',
+      height: 'large'
+    },
+    {
+      id: 16,
+      src: "/images/gallery/16.png",
+      alt: "Leap of Faith",
+      title: "Leap of Faith",
+      description: "Standing at the edge, moments before a bungee jump, capturing the thrill, courage, and adrenaline of pushing beyond limits.",
+      category: "Adventure & Extreme Sports",
+      width: 'small',
+      height: 'small'
+    },
+    {
+      id: 17,
+      src: "/images/gallery/17.jpg",
+      alt: "Power and Positivity",
+      title: "Power and Positivity",
+      description: "Capturing strength and energy in the gym, blending dedication to training with a confident smile and positive spirit.",
+      category: "Fitness & Lifestyle",
+      width: 'small',
+      height: 'small'
+    },
+    {
+      id: 18,
+      src: "/images/gallery/18.jpg",
+      alt: "Ready for Takeoff",
+      title: "Ready for Takeoff",
+      description: "Gearing up for paragliding with helmet and harness, capturing the excitement and anticipation before soaring through the skies.",
+      category: "Adventure & Outdoor Sports",
+      width: 'large',
+      height: 'large'
+    },
+    {
+      id: 20,
+      src: "/images/gallery/20.jpg",
+      alt: "No Tobacco Awareness Drive",
+      title: "No Tobacco Awareness Drive",
+      description: "A group awareness activity promoting a tobacco-free lifestyle. The campaign highlights the importance of health and community-driven change, encouraging people to join the - No Tobacco Family.",
+      category: "Social Initiative / Campaign",
+      width: 'large',
+      height: 'large'
+    },
+    
+    
   ];
 
   const getTileSize = (width: string, height: string) => {
@@ -166,7 +291,7 @@ const Gallery = () => {
         duration={4}
       />
       
-      <div className="container mx-auto px-6 pt-24 pb-10">
+      <div className="container mx-auto px-6 pt-8 md:pt-16 pb-8">
         {/* Header Section */}
         <motion.div 
           className="text-center mb-16"

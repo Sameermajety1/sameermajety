@@ -22,7 +22,7 @@ const ThemeToggle: React.FC = () => {
     <button
       onClick={toggleTheme}
       aria-label="Toggle color theme"
-      className="fixed left-4 bottom-28 md:bottom-6 z-50 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border border-gray/30 bg-primary/90 backdrop-blur-md hover:shadow-xl transition-all"
+      className="fixed right-4 top-2 md:left-4 md:top-auto md:bottom-6 z-50 rounded-full w-12 h-12 flex items-center justify-center shadow-lg border border-gray/30 bg-primary/90 backdrop-blur-md hover:shadow-xl transition-all"
     >
       <span className="text-xl">
         {isDark ? '🌙' : '☀️'}

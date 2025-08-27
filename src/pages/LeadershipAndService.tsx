@@ -81,7 +81,7 @@ const LeadershipAndService = () => {
         duration={4}
       />
       
-      <div className="container mx-auto px-6 pt-24 pb-10">
+      <div className="container mx-auto px-6 pt-8 md:pt-16 pb-8">
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
