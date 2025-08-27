@@ -5,15 +5,21 @@ import { FloatingParticle } from '../components/FloatingElements';
 // Shared data used to render mobile cards in sync with desktop content
 const experienceItems = [
   {
-    date: 'August 2025 - September 2025',
+    date: 'May 2025 - Present',
     title: 'Research Assistant - Internal Medicine',
-    location: 'Nnn, Baton Rouge, LA, United States of America',
-    focus: 'Primary Focus: Clinical / Translational science',
+    location: 'Cleveland Clinic, Cleveland, OH, United States of America',
+    focus: 'Primary Focus: Research',
   },
   {
     date: 'July 2025 - August 2025',
     title: 'Internal Medicine Observership (Outpatient)',
     location: 'Corewell Health, Dearborn, MI, United States of America',
+    focus: 'Primary Focus: Clinical / Translational science',
+  },
+  {
+    date: 'September 2022 - Present',
+    title: 'Clinical Intern',
+    location: 'Rangaraya Medical College, Kakinada, 533001, India',
     focus: 'Primary Focus: Clinical / Translational science',
   },
   {
@@ -39,12 +45,6 @@ const experienceItems = [
     title: 'Medical Volunteer Doctor',
     location: 'Indian Red Cross Society, Kakinada, 533001, India',
     focus: 'Primary Focus: Community involvement / Outreach',
-  },
-  {
-    date: 'September 2022 - September 2023',
-    title: 'Clinical Intern',
-    location: 'Rangaraya Medical College, Kakinada, 533001, India',
-    focus: 'Primary Focus: Clinical / Translational science',
   },
   {
     date: 'September 2019 - May 2022',
