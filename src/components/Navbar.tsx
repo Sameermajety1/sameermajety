@@ -57,12 +57,12 @@ const Navbar: React.FC = () => {
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+          transition={{ duration: 0.5 }}
+        >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('home')}
             className="flex items-center space-x-2 cursor-pointer"
           >
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => {
               const isActive = activeSection === item.path;
               return (
-                <button
+              <button
                   key={item.path}
                   onClick={() => scrollToSection(item.path)}
                   className="relative font-medium transition-colors duration-300 text-light hover:text-secondary group"
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
                   )}
                   {/* Hover underline - only show when not active */}
                   {!isActive && (
-                    <motion.div
+                  <motion.div
                       className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary origin-left"
                       initial={{ scaleX: 0 }}
                       whileHover={{ scaleX: 1 }}

@@ -285,7 +285,7 @@ const PublicationCard = ({ pub }: { pub: Publication }) => (
                   {pub.link && pub.link !== "#" && (
                     <a 
                       href={pub.link} 
-                      className="text-secondary text-sm hover:underline flex items-center gap-1"
+                    className="text-secondary text-sm hover:underline flex items-center gap-1"
                     >
                       Read full paper
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -245,7 +245,7 @@ const Contact = () => {
                     type="text" 
                     id="name" 
                     name="name"
-                    className="form-input w-full bg-dark border border-light/10 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
+                    className="form-input w-full bg-primary/80 text-light placeholder-gray border border-gray/30 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
                     placeholder="Your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -264,7 +264,7 @@ const Contact = () => {
                     type="email" 
                     id="email" 
                     name="email"
-                    className="form-input w-full bg-dark border border-light/10 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
+                    className="form-input w-full bg-primary/80 text-light placeholder-gray border border-gray/30 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
                     placeholder="Your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -285,7 +285,7 @@ const Contact = () => {
                   type="text" 
                   id="subject" 
                   name="subject"
-                  className="form-input w-full bg-dark border border-light/10 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
+                  className="form-input w-full bg-primary/80 text-light placeholder-gray border border-gray/30 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
                   placeholder="Message subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -305,7 +305,7 @@ const Contact = () => {
                   id="message" 
                   name="message"
                   rows={5}
-                  className="form-textarea w-full bg-dark border border-light/10 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
+                  className="form-textarea w-full bg-primary/80 text-light placeholder-gray border border-gray/30 rounded-lg p-3 focus:outline-none focus:border-secondary transition-colors"
                   placeholder="Your message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
