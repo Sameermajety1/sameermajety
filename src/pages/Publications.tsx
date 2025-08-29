@@ -100,8 +100,8 @@ const peerReviewedPublications: Publication[] = [
     year: 2024,
     date: "November",
     authors: "Majety SK, Modh S, Mishra D, Alam N, Suvvari TK, Pagadala CGM, Muppana G.",
-    abstract: "",
-    link: "#"
+    abstract: "Common variable immunodeficiency (CVID) is one of the more common immunodeficiencies seen in clinical practice with a complex disease pathology; while growth hormone deficiency (GHD) is a disorder characterized by complete or relative absence of the human growth hormone.",
+    link: "https://journals.lww.com/annals-of-medicine-and-surgery/fulltext/2024/11000/the_interplay_of_immunity_and_growth__a_case_of.85.aspx#:~:text=Common%20variable%20immunodeficiency%20(CVID)%20is,of%20the%20human%20growth%20hormone"
   },
   {
     title: "Atypical Presentation of L3 Vertebral Body Osteochondroma Mimicking Cauda Equina Syndrome: A Case Report.",
@@ -191,7 +191,24 @@ const posterPresentations: ConferencePresentation[] = [
     year: 2025,
     date: "19 October",
     authors: "Mishra D, Alam N, Majety SK."
+  },
+  {
+    title: "State-wise and National Trends of Type 1 and Type 2 Diabetes Mellitus in India: A Systematic Analysis from the Global Burden of Disease Study 2021",
+    journal: "Association of International Research (AIR).",
+    conference: "Hyderabad, India",
+    year: 2025,
+    date: "6 April",
+    authors: " Majety SK, Kamadi H, Seelam V, Earni SC"
+  },
+  {
+    title: "Clinical Outcomes and Predictors of Mortality in Paraquat Poisoning: Insights from a Tertiary Care Center in South India",
+    journal: "Association of International Research (AIR).",
+    conference: "Hyderabad, India",
+    year: 2025,
+    date: "6 April",
+    authors: " Majety SK, Pasam SS, Sakalabaktula KSK, Sandeep C, Pathipaka S, Kathare AR."
   }
+
 ];
 
 const publications = {

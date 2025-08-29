@@ -8,7 +8,6 @@ interface GalleryImage {
   src: string;
   alt: string;
   title: string;
-  description: string;
   category: string;
   width: 'small' | 'medium' | 'large';
   height: 'small' | 'medium' | 'large';
@@ -23,7 +22,6 @@ const Gallery = () => {
       src: "/images/gallery/1.jpg",
       alt: "White Water Rafting Adventure",
       title: "White Water Rafting Adventure",
-      description: "An exhilarating rafting experience navigating through river rapids, showcasing teamwork, thrill, and the beauty of nature.",
       category: "Travel & Adventure",
       width: 'small',
       height: 'small'
@@ -33,7 +31,6 @@ const Gallery = () => {
       src: "/images/gallery/2.jpg",
       alt: "Night Skating Sprint",
       title: "Night Skating Sprint",
-      description: "A fun and energetic skating session under the floodlights, capturing speed, balance, and the spirit of friendly competition.",
       category: "Sports & Lifestyle",
       width: 'small',
       height: 'small'
@@ -43,7 +40,6 @@ const Gallery = () => {
       src: "/images/gallery/3.jpg",
       alt: "Academic Excellence Award",
       title: "Academic Excellence Award",
-      description: "Honored with a certificate of achievement in recognition of outstanding academic performance and dedication to learning.",
       category: "Achievements",
       width: 'large',
       height: 'large'
@@ -53,7 +49,6 @@ const Gallery = () => {
       src: "/images/gallery/4.jpg",
       alt: "Moments of Joy",
       title: "Moments of Joy",
-      description: "A candid moment of happiness shared with laksha, my Great Dane, capturing the bond, playfulness, and unconditional love of pets.",
       category: "Lifestyle & Personal",
       width: 'large',
       height: 'large'
@@ -63,7 +58,6 @@ const Gallery = () => {
       src: "/images/gallery/5.jpg",
       alt: "Unconditional Love with Jo & Bruno",
       title: "Unconditional Love with Jo & Bruno",
-      description: "A heartwarming moment with Jo, my Belgian Malinois, and Bruno, my Rottweiler—capturing the playful bond and unconditional affection they bring every day.",
       category: "Lifestyle & Pets",
       width: 'small',
       height: 'small'
@@ -73,7 +67,6 @@ const Gallery = () => {
       src: "/images/gallery/6.jpg",
       alt: "Research Presentation",
       title: "Research Presentation",
-      description: "Presented research on state-wise and national trends of diabetes mellitus in India, analyzing data from the Global Burden of Disease Study 2021.",
       category: "Academic & Achievements",
       width: 'small',
       height: 'small'
@@ -84,7 +77,6 @@ const Gallery = () => {
       src: "/images/gallery/7.jpg",
       alt: "Clinical Research Poster Presentation",
       title: "Clinical Research Poster Presentation",
-      description: "Presented research on clinical outcomes and predictors of mortality in paraquat poisoning, highlighting the urgent need for awareness and improved treatment strategies.",
       category: "Academic & Achievements",
       width: 'small',
       height: 'small'
@@ -94,7 +86,6 @@ const Gallery = () => {
       src: "/images/gallery/9.jpg",
       alt: "Soaring the Skies",
       title: "Soaring the Skies",
-      description: "A breathtaking paragliding experience above lush green valleys, embracing the thrill of flight and the beauty of nature from above.",
       category: "Travel & Adventure",
       width: 'small',
       height: 'small'
@@ -104,7 +95,6 @@ const Gallery = () => {
       src: "/images/gallery/8.jpg",
       alt: "Morning at the Shore with Jo",
       title: "Morning at the Shore with Jo",
-      description: "A peaceful beachside morning spent with Jo, my Belgian Malinois—capturing the bond of trust and companionship against the backdrop of the sea.",
       category: "Lifestyle & Pets",
       width: 'large',
       height: 'large'
@@ -114,7 +104,6 @@ const Gallery = () => {
       src: "/images/gallery/10.JPG",
       alt: "The Art of Public Speaking",
       title: "The Art of Public Speaking",
-      description: "Delivering insights and ideas with confidence on stage — blending knowledge with communication to inspire, inform, and connect with an audience.",
       category: "Professional & Academic",
       width: 'large',
       height: 'large'
@@ -124,7 +113,6 @@ const Gallery = () => {
       src: "/images/gallery/11.jpg",
       alt: "Reaching New Heights",
       title: "Reaching New Heights",
-      description: "Standing tall at 4680 meters, surrounded by breathtaking snow-covered peaks and crystal-clear skies, capturing the thrill of high-altitude adventure.",
       category: "Travel & Adventure",
       width: 'small',
       height: 'small'
@@ -135,7 +123,6 @@ const Gallery = () => {
       src: "/images/gallery/13.jpeg",
       alt: "Strength in Balance",
       title: "Strength in Balance",
-      description: "A powerful handstand on the beach at sunrise, blending strength, focus, and calm with the beauty of nature’s horizon.",
       category: "TFitness & Lifestyle",
       width: 'small',
       height: 'small'
@@ -146,7 +133,6 @@ const Gallery = () => {
       src: "/images/gallery/14.jpg",
       alt: "Guiding Through Uncertainty",
       title: "Guiding Through Uncertainty",
-      description: "Delivering a classroom session with thought-provoking discussions, encouraging students to explore diverse academic and career pathways.",
       category: "Education & Seminars",
       width: 'small',
       height: 'small'
@@ -154,9 +140,8 @@ const Gallery = () => {
     {
       id: 15,
       src: "/images/gallery/15.jpg",
-      alt: "Union Member’s Address",
-      title: "Union Member’s Address",
-      description: "Delivering a formal speech as a student union representative, highlighting leadership, confidence, and active participation in academic life.",
+      alt: "Union Member's Address",
+      title: "Union Member's Address",
       category: "Public Speaking & Leadership",
       width: 'small',
       height: 'small'
@@ -166,7 +151,6 @@ const Gallery = () => {
       src: "/images/gallery/12.JPG",
       alt: "Focused Minds at Work",
       title: "Focused Minds at Work",
-      description: "A group of learners engaged in a session, capturing focus, curiosity, and collaboration in a bright and inspiring environment.",
       category: "Events & Portraits",
       width: 'large',
       height: 'large'
@@ -176,7 +160,6 @@ const Gallery = () => {
       src: "/images/gallery/19.jpg",
       alt: "Dancing Spirits",
       title: "Dancing Spirits",
-      description: "Performing a fun and energetic dance at a welcome party, capturing the joy, rhythm, and excitement of student life.",
       category: "Events & Celebrations",
       width: 'large',
       height: 'large'
@@ -186,7 +169,6 @@ const Gallery = () => {
       src: "/images/gallery/16.png",
       alt: "Leap of Faith",
       title: "Leap of Faith",
-      description: "Standing at the edge, moments before a bungee jump, capturing the thrill, courage, and adrenaline of pushing beyond limits.",
       category: "Adventure & Extreme Sports",
       width: 'small',
       height: 'small'
@@ -196,7 +178,6 @@ const Gallery = () => {
       src: "/images/gallery/17.jpg",
       alt: "Power and Positivity",
       title: "Power and Positivity",
-      description: "Capturing strength and energy in the gym, blending dedication to training with a confident smile and positive spirit.",
       category: "Fitness & Lifestyle",
       width: 'small',
       height: 'small'
@@ -206,7 +187,6 @@ const Gallery = () => {
       src: "/images/gallery/18.jpg",
       alt: "Ready for Takeoff",
       title: "Ready for Takeoff",
-      description: "Gearing up for paragliding with helmet and harness, capturing the excitement and anticipation before soaring through the skies.",
       category: "Adventure & Outdoor Sports",
       width: 'large',
       height: 'large'
@@ -216,7 +196,6 @@ const Gallery = () => {
       src: "/images/gallery/20.jpg",
       alt: "No Tobacco Awareness Drive",
       title: "No Tobacco Awareness Drive",
-      description: "A group awareness activity promoting a tobacco-free lifestyle. The campaign highlights the importance of health and community-driven change, encouraging people to join the - No Tobacco Family.",
       category: "Social Initiative / Campaign",
       width: 'large',
       height: 'large'
@@ -367,8 +346,7 @@ const Gallery = () => {
                   <FaCamera className="text-white/80 text-sm" />
                   <span className="text-white/80 text-xs font-medium">{image.category}</span>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-1">{image.title}</h3>
-                <p className="text-white/90 text-sm line-clamp-2">{image.description}</p>
+                <h3 className="text-white font-bold text-lg">{image.title}</h3>
               </div>
               
               {/* Hover Effects */}
@@ -419,28 +397,24 @@ const Gallery = () => {
 
                 {/* Content Section - Fixed Size */}
                 <div className="lg:w-[40%] h-[50%] lg:h-full p-6 lg:p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-t lg:border-t-0 lg:border-l border-white/20 overflow-y-auto dark:from-primary/10 dark:to-primary/5 dark:border-gray/20">
-                  <div className="h-full flex flex-col justify-start">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="bg-secondary/20 backdrop-blur-sm rounded-full p-2">
-                        <FaCamera className="text-secondary text-lg" />
+                  <div className="h-full flex flex-col justify-center">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="bg-secondary/20 backdrop-blur-sm rounded-full p-3">
+                        <FaCamera className="text-secondary text-xl" />
                       </div>
-                      <span className="text-secondary font-bold">{selectedImage.category}</span>
+                      <span className="text-secondary font-bold text-lg">{selectedImage.category}</span>
                     </div>
                     
-                    <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">{selectedImage.title}</h2>
-                    
-                    <p className="text-white/90 text-sm lg:text-base leading-relaxed mb-6">
-                      {selectedImage.description}
-                    </p>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">{selectedImage.title}</h2>
                     
                     <div className="flex items-center gap-4 mt-auto">
-                      <div className="flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm rounded-full px-3 py-1">
-                        <FaStar className="text-yellow-400 text-sm" />
-                        <span className="text-white text-sm font-medium">Featured</span>
+                      <div className="flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm rounded-full px-4 py-2">
+                        <FaStar className="text-yellow-400 text-base" />
+                        <span className="text-white text-base font-medium">Featured</span>
                       </div>
-                      <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm rounded-full px-3 py-1">
-                        <FaHeart className="text-red-400 text-sm" />
-                        <span className="text-white text-sm font-medium">Loved</span>
+                      <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm rounded-full px-4 py-2">
+                        <FaHeart className="text-red-400 text-base" />
+                        <span className="text-white text-base font-medium">Loved</span>
                       </div>
                     </div>
                   </div>

@@ -42,7 +42,7 @@ const leadershipRoles: LeadershipRole[] = [
   },
   {
     title: "Educational Leadership",
-    position: "Founder & Head Mentor – Competitive Exam Mentorship Program",
+    position: "Founder & Mentor – Competitive Exam Mentorship Program",
     description: "Established and led a mentorship program to guide students in competitive exam preparation, fostering academic excellence.",
     icon: FaLightbulb,
     colorClass: iconColors.lightbulb
