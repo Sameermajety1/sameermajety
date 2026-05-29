@@ -5,14 +5,24 @@ import { FloatingParticle } from '../components/FloatingElements';
 // Shared data used to render mobile cards in sync with desktop content
 const experienceItems = [
   {
+    date: 'March 2026 - Present',
+    title: 'Incoming Internal Medicine Resident - Centerpoint Medical center, HCA',
+    location: 'Healthcare Kansas City, Missouri',
+  },
+  {
+    date: 'July 2025 - Present',
+    title: 'Junior Doctor',
+    location: 'Sri Bala Prabha Multispeciality Hospital, Kakinada',
+  },
+  {
     date: 'May 2025 - Present',
-    title: 'Research Assistant - Internal Medicine',
+    title: 'Remote Research Assistant - Internal Medicine',
     location: 'Cleveland Clinic, Cleveland, OH, United States of America',
     focus: 'Primary Focus: Research',
   },
   {
     date: 'July 2025 - August 2025',
-    title: 'Internal Medicine Observership (Outpatient)',
+    title: 'Internal Medicine Observership (Outpatient) Virtual',
     location: 'Corewell Health, Dearborn, MI, United States of America',
     focus: 'Primary Focus: Clinical / Translational science',
   },
@@ -24,7 +34,7 @@ const experienceItems = [
   },
   {
     date: 'May 2025 - June 2025',
-    title: 'Internal Medicine Observership (Outpatient)',
+    title: 'Internal Medicine Observership (Outpatient) Virtual',
     location: 'Curewell Medical Center, Chicago, IL, United States of America',
     focus: 'Primary Focus: Clinical / Translational science',
   },
@@ -122,6 +132,166 @@ const Experience = () => {
               <div className="absolute inset-0 rounded-full animate-pulse opacity-50"></div>
             </div>
 
+            <div className="flex items-start relative mb-6 mt-0">
+              {/* Timeline dot in the middle */}
+              <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
+                <motion.div
+                  className="w-8 h-8 bg-accent rounded-full"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 15 
+                  }}
+                  style={{
+                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
+                  }}
+                >
+                  <motion.div 
+                    className="absolute inset-0 rounded-full"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
+                        '0 0 0 12px rgba(4, 71, 171, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </motion.div>
+              </div>
+
+              {/* Left column empty */}
+              <div className="w-1/2 pr-8 text-right">
+                  <motion.div
+                  className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">March 2026 - Present</span>
+                  <h3 className="text-2xl font-bold mb-2">Incoming Internal Medicine Resident <br></br> Centerpoint Medical center, HCA</h3>
+                  <p className="text-lg mb-1 italic">Healthcare Kansas City, Missouri</p>
+                  
+                </motion.div>
+              </div>
+              
+              {/* Right column - House Surgeon details */}
+              <div className="w-1/2 pl-8">
+                
+              </div>
+            </div>
+
+            {/* first exp */}
+            <div className="flex items-start relative mb-6">
+              {/* Timeline dot in the middle */}
+              <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
+                <motion.div
+                  className="w-8 h-8 bg-secondary rounded-full"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 15 
+                  }}
+                  style={{
+                    boxShadow: '0 0 20px rgba(229, 184, 11, 0.8)'
+                  }}
+                >
+                  <motion.div 
+                    className="absolute inset-0 rounded-full"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 0 0px rgba(229, 184, 11, 0.8)', 
+                        '0 0 0 12px rgba(229, 184, 11, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </motion.div>
+              </div>
+
+              {/* Left column  */}
+              <div className="w-1/2 pr-8 text-right">
+                
+              </div>
+              
+              {/* Right column empty */}
+              <div className="w-1/2 pl-8">
+                  <motion.div
+                  className="mb-6 bg-gradient-to-l from-secondary/5 to-secondary/15 p-5 rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="flex justify-end">
+                    <span className="text-secondary text-sm mb-2 block bg-secondary/10 px-4 py-1 rounded-full w-fit">July 2025 - Present</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Junior Doctor</h3>
+                  <p className="text-lg mb-1 italic">Sri Bala Prabha Multispeciality Hospital, Kakinada</p>
+                </motion.div>
+              </div>
+            </div>
+
+            <div className="flex items-start relative mb-6">
+              {/* Timeline dot in the middle */}
+              <div className="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
+                <motion.div
+                  className="w-8 h-8 bg-accent rounded-full"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 15 
+                  }}
+                  style={{
+                    boxShadow: '0 0 20px rgba(4, 71, 171, 0.8)'
+                  }}
+                >
+                  <motion.div 
+                    className="absolute inset-0 rounded-full"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 0 0px rgba(4, 71, 171, 0.8)', 
+                        '0 0 0 12px rgba(4, 71, 171, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </motion.div>
+              </div>
+
+              {/* Left column empty */}
+              <div className="w-1/2 pr-8 text-right">
+                  <motion.div
+                  className="mb-6 bg-gradient-to-r from-accent/5 to-accent/15 p-5 rounded-2xl shadow-lg"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">September 2022 - Present</span>
+                  <h3 className="text-2xl font-bold mb-2">Clinical Intern</h3>
+                  <p className="text-lg mb-1 italic">Rangaraya Medical College, Kakinada, 533001, India</p>
+                  <p className="text-gray mt-3">
+                  Primary Focus: Clinical / Translational science
+                  </p>
+                </motion.div>
+              </div>
+              
+              {/* Right column - Clinical Extern details */}
+              <div className="w-1/2 pl-8">
+                
+              </div>
+            </div>
+
             {/* House Surgeon */}
             <div className="flex items-start relative mb-6 mt-0">
               {/* Timeline dot in the middle */}
@@ -167,7 +337,7 @@ const Experience = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">May 2025 - Present</span>
-                  <h3 className="text-2xl font-bold mb-2">Research Assistant - Internal Medicine</h3>
+                  <h3 className="text-2xl font-bold mb-2">Remote Research Assistant - Internal Medicine</h3>
                   <p className="text-lg mb-1 italic">Cleveland Clinic, Cleveland, OH, United States of America</p>
                   <p className="text-gray mt-3">
                   Primary Focus: Research
@@ -219,7 +389,7 @@ const Experience = () => {
                   <div className="flex justify-end">
                     <span className="text-secondary text-sm mb-2 block bg-secondary/10 px-4 py-1 rounded-full w-fit">July 2025 - August 2025</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2"> Internal Medicine Observership (Outpatient)</h3>
+                  <h3 className="text-2xl font-bold mb-2"> Internal Medicine Observership (Outpatient) Virtual</h3>
                   <p className="text-lg mb-1 italic"> Corewell Health, Dearborn, MI, United States of America</p>
                   <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
@@ -326,7 +496,7 @@ const Experience = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <span className="text-accent text-sm mb-2 block bg-accent/10 px-4 py-1 rounded-full w-fit">May 2025 - June 2025</span>
-                  <h3 className="text-2xl font-bold mb-2">Internal Medicine Observership (Outpatient)</h3>
+                  <h3 className="text-2xl font-bold mb-2">Internal Medicine Observership (Outpatient) Virtual</h3>
                   <p className="text-lg mb-1 italic">Curewell Medical Center,  Chicago, IL, United States of America</p>
                   <p className="text-gray mt-3">
                   Primary Focus: Clinical / Translational science
